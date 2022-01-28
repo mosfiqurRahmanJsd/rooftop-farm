@@ -1,16 +1,19 @@
 [
     {
+        "id": 1,
+        "shortTitle": "Strawberries were again the No. 1 crop at $508,371,000, but decreased by 24% from 2018",
+        "description": "The estimated gross value of Ventura County’s agriculture for calendar year 2019 is $1,990,100,000. This represents an overall decrease of 5% in comparison to 2018. Strawberries were again the No. 1 crop at $508,371,000, but decreased by 24% from 2018. Celery, for the first time moved up into second place, displacing Lemons, with a value of $243,455,000, increasing by 18%. Lemons dropped into third place with a value of $211,104,000, decreasing by 14%. Raspberries rose to fourth place with a value of $203,538,000, increasing by 11%. Nursery Stock dropped to fifth place with a value of $187,467,000, decreasing by 4%. Avocados remained in sixth place with a value of $116,981,000, and increased by 12%. Tomatoes remained in seventh place with a value of $46,485,000, but decreased by 5%. Cut Flowers remained in eighth place, with a value of $46,153,000, but decreased by 5%. Peppers remained in ninth place, with a value of $42,880,000, but decreased by 1%. Hemp, a crop that was reintroduced into Ventura County in 2018, replaced cabbage as the 10th-leading crop, with a value of $35,460,000.",
         "key": "B002RL8IYK",
-        "category": "laptop",
-        "name": "3M Gold Privacy Filter for 17\" Widescreen Laptop (16:10) (GF170W1B)",
+        "category": "rooftop",
+        "name": "Strawberries",
         "seller": "3M",
         "wholePrice": "68",
         "priceFraction": "36",
         "stock": 36,
         "star": 3,
         "starCount": 3245,
-        "img": "https://images-na.ssl-images-amazon.com/images/I/415oziPFA0L._AC_US218_.jpg",
-        "url": "https://www.amazon.com/gp/slredirect/picassoRedirect.html/ref=pa_sp_atf_electronics_sr_pg1_1?ie=UTF8&adId=A03956601N6RBLKGAP4W1&url=https%3A%2F%2Fwww.amazon.com%2F3M-Privacy-Filter-Widescreen-Laptop%2Fdp%2FB002RL8IYK%2Fref%3Dsr_1_1%3Fs%3Delectronics%26ie%3DUTF8%26qid%3D1499124890%26sr%3D1-1-spons%26keywords%3Dlaptop%26psc%3D1&qualifier=1499124889&id=6267744216991374&widgetName=sp_atf",
+        "img": "https://i.ibb.co/pX00Wx5/2013-WFM-Maureen-White-1640-34-1024x683.webp",
+        "url": "https://vegetablegrowersnews.com/news/strawberries-lead-the-way-as-top-crop-in-ventura-county-california/",
         "features": [
             {
                 "description": "Display Size",
@@ -25,8 +28,11 @@
         "shipping": 7.99
     },
     {
+        "id": 2,
+        "shortTitle": "Strawberries were again the No. 1 crop at $508,371,000, but decreased by 24% from 2018",
+        "description": "The estimated gross value of Ventura County’s agriculture for calendar year 2019 is $1,990,100,000. This represents an overall decrease of 5% in comparison to 2018. Strawberries were again the No. 1 crop at $508,371,000, but decreased by 24% from 2018. Celery, for the first time moved up into second place, displacing Lemons, with a value of $243,455,000, increasing by 18%. Lemons dropped into third place with a value of $211,104,000, decreasing by 14%. Raspberries rose to fourth place with a value of $203,538,000, increasing by 11%. Nursery Stock dropped to fifth place with a value of $187,467,000, decreasing by 4%. Avocados remained in sixth place with a value of $116,981,000, and increased by 12%. Tomatoes remained in seventh place with a value of $46,485,000, but decreased by 5%. Cut Flowers remained in eighth place, with a value of $46,153,000, but decreased by 5%. Peppers remained in ninth place, with a value of $42,880,000, but decreased by 1%. Hemp, a crop that was reintroduced into Ventura County in 2018, replaced cabbage as the 10th-leading crop, with a value of $35,460,000.",
         "key": "B01LZ2WZGH",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "Manfrotto MB LF-WN-BP camera & laptop backpack for DSLR Lifestyle Windsor, grey",
         "seller": "Manfrotto",
         "wholePrice": "169",
@@ -34,15 +40,15 @@
         "stock": 55,
         "star": 2,
         "starCount": 2899,
-        "img": "https://images-na.ssl-images-amazon.com/images/I/51mEVhwXGKL._AC_US218_.jpg",
-        "url": "https://www.amazon.com/gp/slredirect/picassoRedirect.html/ref=pa_sp_atf_electronics_sr_pg1_2?ie=UTF8&adId=A04941221ULRUNSJPY1RW&url=https%3A%2F%2Fwww.amazon.com%2FManfrotto-MB-LF-WN-BP-backpack-Lifestyle%2Fdp%2FB01LZ2WZGH%2Fref%3Dsr_1_2%3Fs%3Delectronics%26ie%3DUTF8%26qid%3D1499124890%26sr%3D1-2-spons%26keywords%3Dlaptop%26psc%3D1&qualifier=1499124889&id=6267744216991374&widgetName=sp_atf",
+        "img": "https://i.ibb.co/f1Kd3SR/large-c3x-C5-ISim-Ogbl-G-xqbv-RPw4pz-K48asia-CCx4-Ir-X4t6-A.jpg",
+        "url": "https://www.weforum.org/agenda/2018/07/belgian-store-tries-out-farm-to-table-growing-on-its-own-roof",
         "features": [],
         "price": 169.88,
         "shipping": 3.99
     },
     {
         "key": "B01K1IO3QW",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "Acer Aspire E 15 E5-575-33BM 15.6-Inch Full HD Notebook (Intel Core i3-7100U Processor 7th Generation , 4GB DDR4, 1TB 5400RPM Hard Drive, Intel HD Graphics 620, Windows 10 Home), Obsidian Black",
         "seller": "Acer",
         "wholePrice": "349",
@@ -79,7 +85,7 @@
     },
     {
         "key": "B01LD4MGY4",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "Acer Aspire E 15 E5-575G-57D4 15.6-Inches Full HD Notebook (i5-7200U, 8GB DDR4 SDRAM, 256GB SSD, Windows 10 Home), Obsidian Black",
         "seller": "Acer",
         "wholePrice": "579",
@@ -116,7 +122,7 @@
     },
     {
         "key": "B01M18UZF5",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "ASUS ZenBook UX330UA-AH54 13.3-inch Ultra-Slim Laptop (Core i5 Processor, 8GB DDR3, 256GB SSD, Windows 10) With Harman Kardon Audio, Backlit keyboard, Fingerprint Reader",
         "seller": "Asus",
         "wholePrice": "699",
@@ -153,7 +159,7 @@
     },
     {
         "key": "B01DBGVB7K",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "ASUS Chromebook C202SA-YS02 11.6\" Ruggedized and Water Resistant Design with 180 Degree (Intel Celeron 4 GB, 16GB eMMC, Dark Blue)",
         "seller": "Asus",
         "wholePrice": 220,
@@ -190,7 +196,7 @@
     },
     {
         "key": "B015WXL0C6",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "Apple MacBook Air 13.3-Inch Laptop (Intel Core i5 1.6GHz, 128GB Flash, 8GB RAM, OS X El Capitan)",
         "seller": "Apple",
         "wholePrice": "848",
@@ -227,7 +233,7 @@
     },
     {
         "key": "B06Y4GZS9C",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "Acer Predator Helios 300 Gaming Laptop, Intel Core i7, GeForce GTX 1 060, 15.6\" Full HD, 16GB DDR4, 256GB SSD, G3-571-77QK",
         "seller": "Acer",
         "wholePrice": "1,049",
@@ -264,7 +270,7 @@
     },
     {
         "key": "B06XJJG4PD",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "ASUS P-Series P2540UA-AB51 business standard Laptop, 7th Gen Intel Core i5, 2.5GHz (3M Cache, up to 3.1GHz), FHD Display, 8GB RAM, 1TB HDD, Windows 10 Home, Fingerprint, TPM, 9hrs battery life",
         "seller": "Asus",
         "wholePrice": "499",
@@ -301,7 +307,7 @@
     },
     {
         "key": "B01NBE6Y5D",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "HP 15.6\" HD WLED Backlit Display Laptop, AMD A6-7310 Quad-Core APU 2GHz, 4GB RAM, 500GB HDD WiFi, DVD+/-RW, Webcam, Windows 10, Black",
         "seller": "HP",
         "wholePrice": "247",
@@ -338,7 +344,7 @@
     },
     {
         "key": "B01J42JPJG",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "Acer Chromebook R 11 Convertible, 11.6-Inch HD Touch, Intel Celeron N3150, 4GB DDR3L, 32GB, Chrome, CB5-132T-C1LK",
         "seller": "Acer",
         "wholePrice": "279",
@@ -375,7 +381,7 @@
     },
     {
         "key": "B01F4ZG68A",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "HP 14-inch Laptop, AMD E2-7110, 4GB RAM, 32GB eMMC, Windows 10 (14-an013nr, Silver)",
         "seller": "HP",
         "wholePrice": "212",
@@ -412,7 +418,7 @@
     },
     {
         "key": "B01D27ERMO",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "Dell Inspiron Flagship 15.6-Inch FHD Touchscreen Backlit Keyboard Laptop PC (Intel Core i5-6200U, 8GB RAM, 1TB HDD, RealSense 3D Camera, DVD +/- RW, Bluetooth, Windows 10), Silver",
         "seller": "Dell",
         "wholePrice": "498",
@@ -449,7 +455,7 @@
     },
     {
         "key": "B06X6J2RLY",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "HP 15.6-Inch HD Touchscreen Laptop (Intel Quad Core Pentium N3540 2.16 GHz, 4GB DDR3L-1600 Memory, 500 GB HDD, DVD Burner, HDMI, HD Webcam, Win 10)",
         "seller": "HP",
         "wholePrice": "287",
@@ -486,7 +492,7 @@
     },
     {
         "key": "B01N5G5PG2",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "ASUS Chromebook Flip C302CA-DHM4 12.5-Inch Touchscreen Intel Core m3 with 64GB storage and 4GB RAM",
         "seller": "Asus",
         "wholePrice": "499",
@@ -523,7 +529,7 @@
     },
     {
         "key": "B01LZ6XKS6",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "Samsung Chromebook Plus Convertible Touch Laptop (XE513C24-K01US)",
         "seller": "Samsung",
         "wholePrice": "408",
@@ -560,7 +566,7 @@
     },
     {
         "key": "B06XFGF7SN",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "Dell Inspiron 15.6\" Gaming Laptop (7th Gen Intel Core i7, 8 GB RAM, 1000 GB HDD + 128GB SSD), NVIDIA GTX 1050) (i5577-7359BLK-PUS)",
         "seller": "Dell",
         "wholePrice": "899",
@@ -597,7 +603,7 @@
     },
     {
         "key": "B01LT692RK",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "ASUS E200HA Portable Lightweight 11.6-inch Intel Quad-Core Laptop, 4GB RAM, 32GB Storage, Windows 10 with 1 Year Microsoft Office 365 Subscription",
         "seller": "Asus",
         "wholePrice": "199",
@@ -634,7 +640,7 @@
     },
     {
         "key": "B071LB1GG4",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "Samsung XE510C24-K01US Chromebook Pro",
         "seller": "Samsung",
         "wholePrice": "549",
@@ -671,7 +677,7 @@
     },
     {
         "key": "B01CVOLVPA",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "Acer Chromebook 14, Aluminum, 14-inch Full HD, Intel Celeron Quad-Core N3160, 4GB LPDDR3, 32GB, Chrome, CB3-431-C5FM",
         "seller": "Acer",
         "wholePrice": "294",
@@ -708,7 +714,7 @@
     },
     {
         "key": "B01EIUOSRS",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "Apple MMGF2LL/A MacBook Air 13.3-Inch Laptop (8GB RAM 128 GB SSD) MMGF2",
         "seller": "Apple",
         "wholePrice": "799",
@@ -745,7 +751,7 @@
     },
     {
         "key": "B01JLCKP34",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "HP Stream Laptop PC 14-ax010nr (Intel Celeron N3060, 4 GB RAM, 32 GB eMMC) with Office 365 Personal for one year",
         "seller": "HP",
         "wholePrice": "219",
@@ -782,7 +788,7 @@
     },
     {
         "key": "B071SF41Y9",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "Microsoft Surface Pro (Intel Core i5, 8GB RAM, 256GB)",
         "seller": "Microsoft",
         "wholePrice": "1,294",
@@ -819,7 +825,7 @@
     },
     {
         "key": "B01N5P6TJW",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "Samsung Chromebook 3, 11.6\", 4GB RAM, 16GB eMMC, Chromebook (XE500C13-K04US)",
         "seller": "Samsung",
         "wholePrice": "169",
@@ -856,7 +862,7 @@
     },
     {
         "key": "B01M8J68W0",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "Kayond Bule Rose Pattern 12-13 inch Canvas laptop sleeve with pocket 12.5inch 13.3 inch laptop case macbook air 13 case macbook pro 13 sleeve",
         "seller": "kayond",
         "wholePrice": "11",
@@ -872,7 +878,7 @@
     },
     {
         "key": "B072TY6LZL",
-        "category": "laptop",
+        "category": "rooftop",
         "name": "Microsoft Surface Laptop 13.5 inch Screen Protector, Megoo Premium [Tempered Glass] Anti-scratch bubble free Screen Protector for Microsoft Surface Laptop (2017 Release)",
         "seller": "Megoo",
         "wholePrice": "17",

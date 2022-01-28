@@ -17,9 +17,9 @@ const Header = () => {
         // This is Header container
         <header>
             {/* Fixed Navbar */}
-            <Navbar bg="muted" expand="md" fixed="top" className="bg-color">
+            <Navbar variant="" expand="md" fixed="top" className="bg-color bg-light">
                 <Container>
-                    <Navbar.Brand href="#" className="header">
+                    <Navbar.Brand href="/" className="header">
                         <img className="img-fluid" src={logo} alt="" />
 
                     </Navbar.Brand>
@@ -30,15 +30,16 @@ const Header = () => {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Nav.Link href="#action1">Home</Nav.Link>
-                            <Nav.Link href="#action2">Contact</Nav.Link>
-                            <Nav.Link href="#action2">Blog</Nav.Link>
-                            <Nav.Link href="#action2">Product</Nav.Link>
-                            <Nav.Link href="#action2">Find Rooftop</Nav.Link>
-                            <Nav.Link href="#action2"><FontAwesomeIcon icon={faCartPlus} /> 1</Nav.Link>
+                            <Nav.Link href="/" className="text-info">Home</Nav.Link>
+                            <Nav.Link href="/contact" className="text-info">Contact</Nav.Link>
+                            <Nav.Link href="/blog" className="text-info">Blog</Nav.Link>
+                            <Nav.Link href="/product" className="text-info">Product</Nav.Link>
+                            <Nav.Link href="/find" className="text-info">Find Rooftop</Nav.Link>
+                            <Nav.Link href="/cart" className="text-info"><FontAwesomeIcon icon={faCartPlus} /> 1</Nav.Link>
 
                             
-                            <Button variant="outline-secondary">Login</Button>
+                            <Button variant="outline-info" href='/login'>Login</Button>
+
                             
                         </Nav>
                         

@@ -1,9 +1,14 @@
 import React from 'react';
+import Header from '../Header/Header';
+import './FindRooftop.css';
 
 const FindRooftop = () => {
     return (
         <div>
-            <h1>This is Find Rooftop</h1>
+            <Header></Header>
+            <div className="container find">
+                <h1>This is Find</h1>
+            </div>
         </div>
     );
 }

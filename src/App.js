@@ -4,16 +4,16 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 import Contact from './components/Contact/Contact';
 import Blog from './components/Blog/Blog';
 import ProductContainer from './components/ProductContainer/ProductContainer';
-import RooftopContainer from './components/RooftopContainer/RooftopContainer';
 import Cart from './components/Cart/Cart';
 import Login from './components/Login/Login';
+import Signup from './components/Signup/Signup';
+import FindRooftop from './components/FindRooftop/FindRooftop';
 
 
 
@@ -36,13 +36,16 @@ function App() {
             <ProductContainer></ProductContainer>
           </Route>
           <Route path="/find">
-            <RooftopContainer></RooftopContainer>
+            <FindRooftop></FindRooftop>
           </Route>
           <Route path="/cart">
             <Cart></Cart>
           </Route>
           <Route path="/login">
             <Login></Login>
+          </Route>
+          <Route path="/signup">
+            <Signup></Signup>
           </Route>
         </Switch>
       

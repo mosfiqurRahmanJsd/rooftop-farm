@@ -6,7 +6,7 @@ import Product from '../Product/Product';
 
 const ProductContainer = () => {
     const first9 = customData.slice(0, 9);
-    const [product, setProduct] = useState(first9);
+    const [product, ] = useState(first9);
 
     const [cart, setCart] = useState([]);
 

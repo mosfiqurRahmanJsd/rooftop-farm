@@ -6,7 +6,7 @@ import Rooftop from '../Rooftop/Rooftop';
 const RooftopContainer = () => {
 
     const first9 = customData.slice(9, 20);
-    const [product, setProduct] = useState(first9);
+    const [product, ] = useState(first9);
 
 
 

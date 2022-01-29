@@ -4,7 +4,10 @@ import Header from '../Header/Header';
 import Product from '../Product/Product';
 
 
-const ProductContainer = () => {
+
+const ProductContainer = (props) => {
+   
+
     const first9 = customData.slice(0, 9);
     const [product, ] = useState(first9);
 
@@ -14,16 +17,17 @@ const ProductContainer = () => {
     const handleAddProduct = (product) => {
         const newCart = [...cart, product];
         setCart(newCart);
+        
     }
 
 
-
+    
 
     return (
         <div className="container my-5">
-
+            <Header cart={cart}></Header>
         
-            <h2 className="py-3 text-center">Latest Products</h2>
+            <h2 className="py-3 text-center">Latest Products </h2>
 
             <div className="row row-cols-1 row-cols-md-3 g-4 my-3">
                 {
@@ -33,7 +37,7 @@ const ProductContainer = () => {
 
             </div>
 
-            <Header cart={cart}></Header>
+            
         </div>
     );
 }

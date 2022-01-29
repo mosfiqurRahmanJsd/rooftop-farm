@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import ProductContainer from '../ProductContainer/ProductContainer';
@@ -7,12 +7,14 @@ import RooftopContainer from './../RooftopContainer/RooftopContainer';
 import Slider from './../Slider/Slider';
 
 const Home = () => {
+    const [count, setCount] = useState(0);
+    console.log(count);
     return (
         <div>
-            <Header></Header>
+            <Header count = {count}></Header>
             <Slider></Slider>
             <RooftopContainer></RooftopContainer>
-            <ProductContainer></ProductContainer>
+            <ProductContainer count = {count} setCount={setCount}></ProductContainer>
             <ReviewContainer></ReviewContainer>
             <Footer></Footer>
         </div>

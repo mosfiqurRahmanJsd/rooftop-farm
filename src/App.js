@@ -14,6 +14,7 @@ import Cart from './components/Cart/Cart';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import FindRooftop from './components/FindRooftop/FindRooftop';
+import RooftopDetail from './components/RooftopDetail/RooftopDetail';
 
 
 
@@ -34,6 +35,9 @@ function App() {
           </Route>
           <Route path="/product">
             <ProductContainer></ProductContainer>
+          </Route>
+          <Route path="/rooftop/:rooftopKey">
+            <RooftopDetail></RooftopDetail>
           </Route>
           <Route path="/find">
             <FindRooftop></FindRooftop>

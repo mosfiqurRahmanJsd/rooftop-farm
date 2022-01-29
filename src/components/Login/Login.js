@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+
 import Header from '../Header/Header';
 import './Login.css';
 
@@ -62,7 +63,7 @@ const Login = () => {
                                         Remember Me
                                     </label>
                                 </div>
-                                <Link className="link-color" to="/forgot_password">
+                                <Link className="link-color" href="/forgot_password">
                                     Forgot Password
                                 </Link>
                             </div>

@@ -4,15 +4,19 @@ import Container from './../../../node_modules/react-bootstrap/esm/Container';
 
 import logo from './../../images/rooftop-farm-logo.png';
 import './Header.css';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 
 
 
+
+
 const Header = (props) => {
     
-    console.log(props);
+    
+    
+    
+   
     
     
 
@@ -40,7 +44,7 @@ const Header = (props) => {
                             <Nav.Link href="/product" className="text-info">Product</Nav.Link>
                             <Nav.Link href="/find" className="text-info">Find Rooftop</Nav.Link>
                             <Nav.Link href="/cart" className="text-info">
-                                <FontAwesomeIcon icon={faCartPlus} /> 1
+                                <FontAwesomeIcon icon={faCartPlus} /> {}
                             </Nav.Link>
 
                             

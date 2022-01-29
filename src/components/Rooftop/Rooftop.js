@@ -1,19 +1,10 @@
-import React, { useState } from 'react';
-import { Modal } from 'react-bootstrap';
+import React, {  } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Rooftop = (props) => {
 
     const pd = props.pd;
-
-    
-
-    const [fullscreen, setFullscreen] = useState(true);
-    const [show, setShow] = useState(false);
-
-    function handleShow(breakpoint) {
-        setFullscreen(breakpoint);
-        setShow(true);
-    }
 
 
 
@@ -31,17 +22,10 @@ const Rooftop = (props) => {
                     <p className="card-text">{pd.shortTitle}</p>
                 </div>
 
-                <button type="button" onClick={handleShow} className="btn  card-footer">View</button>
+                <Link to={`/rooftop/${pd.key}`} type="button" className="btn  card-footer">View</Link>
 
 
-                <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>Modal</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>Modal body content</Modal.Body>
-
-                    
-                </Modal>
+                
 
             </div>
         </div>

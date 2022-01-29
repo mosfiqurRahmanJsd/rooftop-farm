@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import './Contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faFacebook, faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Contact = () => {
     return (
@@ -19,14 +19,14 @@ const Contact = () => {
                         <div className="ms-5">
                         <p>To talk to our farmer, email farmer@rooftopfarm.com</p> 
                         <p>For press inquiries, email press@rooftopfarm.com</p> 
-                        <p>To learn more about volunteering, <Link className="text-info" href="#">rooftopfarm.com/volunteer/</Link></p>
+                        <p>To learn more about volunteering, <Link className="text-info" href="/#">rooftopfarm.com/volunteer/</Link></p>
                         <p>For information about our market and volunteer days, Follow:</p> 
                         </div>
                         <div className="div w-50">
                         <ul className="list-unstyled mt-4 d-flex justify-content-around social-icon">
-                            <li><a className="text-decoration-none" href="#0"><FontAwesomeIcon icon={faFacebook} /></a></li>
-                            <li><a className="text-decoration-none " href="#0"><FontAwesomeIcon icon={faTwitter} /></a></li>
-                            <li><a className="text-decoration-none" href="#0"><FontAwesomeIcon icon={faInstagramSquare} /></a></li>
+                            <li><a className="text-decoration-none" href="/#"><FontAwesomeIcon icon={faFacebook} /></a></li>
+                            <li><a className="text-decoration-none " href="/#"><FontAwesomeIcon icon={faTwitter} /></a></li>
+                            <li><a className="text-decoration-none" href="/#"><FontAwesomeIcon icon={faInstagramSquare} /></a></li>
                            
                         </ul>
                         </div>

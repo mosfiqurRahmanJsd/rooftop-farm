@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
-
-import Header from '../Header/Header';
 import './Login.css';
 
 const Login = () => {
@@ -22,7 +20,6 @@ const Login = () => {
 
     return (
         <div>
-            <Header></Header>
             <div className="container">
                 <div className="card d-block mx-auto login">
                     <div className="card-body p-2 p-md-5">

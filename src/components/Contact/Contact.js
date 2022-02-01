@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../Header/Header';
 import './Contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faFacebook, faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
@@ -8,7 +7,6 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 const Contact = () => {
     return (
         <div>
-            <Header></Header>
             <div className="container contact-us">
                 <h2 className="mb-5 text-center">Contact Us</h2>
                 <div className="row">

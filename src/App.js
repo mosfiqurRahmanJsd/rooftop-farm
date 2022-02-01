@@ -1,6 +1,5 @@
-import Header from './components/Header/Header';
 import Home from "./components/Home/Home";
-import React from "react";
+import React, { createContext, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,14 +14,25 @@ import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import FindRooftop from './components/FindRooftop/FindRooftop';
 import RooftopDetail from './components/RooftopDetail/RooftopDetail';
+import Header from "./components/Header/Header";
 
+
+export const CartContext = createContext();
 
 
 
 function App() {
+
+  
+  
+
+  const [cart, setCart] = useState([]);
+  
   return (
-    <Router>
-        <Header></Header>
+
+    <CartContext.Provider value="cart">
+      <Router>
+        <Header cart = {cart}></Header>
         <Switch>
           <Route exact path="/">
             <Home></Home>
@@ -34,7 +44,7 @@ function App() {
             <Blog></Blog>
           </Route>
           <Route path="/product">
-            <ProductContainer></ProductContainer>
+            <ProductContainer cart = {cart} setCart = {setCart}></ProductContainer>
           </Route>
           <Route path="/rooftop/:rooftopKey">
             <RooftopDetail></RooftopDetail>
@@ -52,8 +62,8 @@ function App() {
             <Signup></Signup>
           </Route>
         </Switch>
-      
-    </Router>
+      </Router>
+    </CartContext.Provider>
   );
 }
 

@@ -1,4 +1,3 @@
-import React, {  } from 'react';
 import { Button, Nav, Navbar } from 'react-bootstrap';
 import Container from './../../../node_modules/react-bootstrap/esm/Container';
 
@@ -11,15 +10,17 @@ import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 
 
 
+
+
+
+
 const Header = (props) => {
     
-    
-    
+    const {cart} = props; 
     
    
     
     
-
     return (
 
         // This is Header container
@@ -44,11 +45,12 @@ const Header = (props) => {
                             <Nav.Link href="/product" className="text-info">Product</Nav.Link>
                             <Nav.Link href="/find" className="text-info">Find Rooftop</Nav.Link>
                             <Nav.Link href="/cart" className="text-info">
-                                <FontAwesomeIcon icon={faCartPlus} /> {}
+                               <FontAwesomeIcon icon={faCartPlus} /> {cart.length}
                             </Nav.Link>
 
                             
                             <Button variant="outline-info" href='/login'>Login</Button>
+                            
 
                             
                         </Nav>

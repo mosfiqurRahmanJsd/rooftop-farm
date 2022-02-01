@@ -20,7 +20,6 @@ const Signup = () => {
 
     return (
         <div>
-            <Header></Header>
             <div className="container">
                 <div className="card d-block mx-auto login">
                     <div className="card-body p-2 p-md-5">

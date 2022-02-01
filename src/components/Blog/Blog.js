@@ -1,6 +1,5 @@
 import { Avatar } from '@mui/material';
 import React from 'react';
-import Header from '../Header/Header';
 import './Blog.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
@@ -10,7 +9,6 @@ import ProductContainer from './../ProductContainer/ProductContainer';
 const Blog = () => {
     return (
         <div>
-            <Header></Header>
             <div className="container blog">
                 <h2 className="text-center">This is Our Blog</h2>
                 <div className="row my-3">

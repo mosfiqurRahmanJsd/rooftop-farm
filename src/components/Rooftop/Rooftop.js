@@ -22,7 +22,7 @@ const Rooftop = (props) => {
                     <p className="card-text">{pd.shortTitle}</p>
                 </div>
 
-                <Link to={`/rooftop/${pd.key}`} type="button" className="btn  card-footer">View</Link>
+                <Link to={`/rooftopDetails/${pd.key}`} type="button" className="btn  card-footer">View</Link>
 
 
                 

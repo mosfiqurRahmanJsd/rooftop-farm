@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
-import customData from '../../customData/products.json'
+import React, { useEffect, useState } from 'react';
 import HomeProduct from '../HomeProduct/HomeProduct';
 
 const HomeProductContainer = () => {
 
-    const first9 = customData.slice(0, 9);
-    const [product] = useState(first9);
+    const [product, setProduct] = useState([]);
+
+    const first9 = product.slice(0, 9);
+    
+    useEffect(() => {
+        fetch('./products.json')
+        .then(res => res.json())
+        .then(data => setProduct(data))
+    }, []);
 
 
 
@@ -16,7 +22,7 @@ const HomeProductContainer = () => {
 
             <div className="row row-cols-1 row-cols-md-3 g-4 my-3">
                 {
-                    product.map(product => <HomeProduct product={product} key={product.url}></HomeProduct>)
+                    first9.map(product => <HomeProduct product={product} key={product.url}></HomeProduct>)
                 }
                 
 

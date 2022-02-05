@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { Link } from 'react-router-dom';
+
 import './Login.css';
 
 const Login = () => {
@@ -60,7 +61,7 @@ const Login = () => {
                                         Remember Me
                                     </label>
                                 </div>
-                                <Link className="link-color" href="/forgot_password">
+                                <Link className="link-color" to="/forgot_password">
                                     Forgot Password
                                 </Link>
                             </div>

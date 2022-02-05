@@ -1,12 +1,8 @@
 import Home from "./components/Home/Home";
-import React, { createContext, useState } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import React, { createContext, useEffect, useState } from "react";
 
-import Contact from './components/Contact/Contact';
+
+
 import Blog from './components/Blog/Blog';
 import ProductContainer from './components/ProductContainer/ProductContainer';
 import Cart from './components/Cart/Cart';
@@ -15,55 +11,51 @@ import Signup from './components/Signup/Signup';
 import FindRooftop from './components/FindRooftop/FindRooftop';
 import RooftopDetail from './components/RooftopDetail/RooftopDetail';
 import Header from "./components/Header/Header";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Contact from './components/Contact/Contact';
 
 
-export const CartContext = createContext();
+
+export const CartContext = createContext('ring');
 
 
 
 function App() {
 
-  
-  
+  useEffect(() => {
+    
+  }, []);
+
 
   const [cart, setCart] = useState([]);
   
+  // const cartValue = useMemo(() => ({cart, setCart}), [cart, setCart]);
+  
+  // console.log(cartValue);
+  
+
   return (
 
-    <CartContext.Provider value="cart">
-      <Router>
-        <Header cart = {cart}></Header>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/contact">
-            <Contact></Contact>
-          </Route>
-          <Route path="/blog">
-            <Blog></Blog>
-          </Route>
-          <Route path="/product">
-            <ProductContainer cart = {cart} setCart = {setCart}></ProductContainer>
-          </Route>
-          <Route path="/rooftop/:rooftopKey">
-            <RooftopDetail></RooftopDetail>
-          </Route>
-          <Route path="/find">
-            <FindRooftop></FindRooftop>
-          </Route>
-          <Route path="/cart">
-            <Cart></Cart>
-          </Route>
-          <Route path="/login">
-            <Login></Login>
-          </Route>
-          <Route path="/signup">
-            <Signup></Signup>
-          </Route>
-        </Switch>
-      </Router>
-    </CartContext.Provider>
+    <div>
+      <CartContext.Provider value={[cart, setCart]}>
+        <main>
+          <Header></Header>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/product" element={<ProductContainer />} />
+              <Route path="/rooftopDetails/:rooftopKey" element={<RooftopDetail />} />
+              <Route path="/find/" element={<FindRooftop />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+            </Routes>
+          </Router>
+        </main>
+      </CartContext.Provider>
+    </div>
   );
 }
 

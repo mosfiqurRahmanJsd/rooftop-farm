@@ -1,17 +1,19 @@
-import React, { useState } from 'react';
-import customData from '../../customData/products.json'
+import React, {   } from 'react';
+
 import Rooftop from '../Rooftop/Rooftop';
+import useProducts from './../../hooks/useProducts';
+
 
 
 const RooftopContainer = () => {
+    const products = useProducts([]);
+    
 
-    const first9 = customData.slice(9, 20);
-    const [product, ] = useState(first9);
+    const first9 = products[0].splice(0, 9);
+    
+    
 
-
-
-
-
+  
 
 
 
@@ -20,13 +22,8 @@ const RooftopContainer = () => {
             <h2 className="py-3 text-center">Latest Rooftops</h2>
             <div className="row row-cols-1 row-cols-md-3 g-4 my-3">
                 {
-                    product.map(pd => <Rooftop pd={pd} key={pd.url}></Rooftop>)
+                    first9.map(pd => <Rooftop pd={pd} key={pd.key}></Rooftop>)
                 }
-
-
-
-
-
             </div>
 
 

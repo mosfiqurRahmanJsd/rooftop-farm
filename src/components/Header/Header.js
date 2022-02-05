@@ -14,12 +14,14 @@ import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 
 
 
-const Header = (props) => {
+
+
+
+
+const Header = () => {
     
-    const {cart} = props; 
     
-   
-    
+
     
     return (
 
@@ -45,7 +47,7 @@ const Header = (props) => {
                             <Nav.Link href="/product" className="text-info">Product</Nav.Link>
                             <Nav.Link href="/find" className="text-info">Find Rooftop</Nav.Link>
                             <Nav.Link href="/cart" className="text-info">
-                               <FontAwesomeIcon icon={faCartPlus} /> {cart.length}
+                               <FontAwesomeIcon icon={faCartPlus} /> 
                             </Nav.Link>
 
                             

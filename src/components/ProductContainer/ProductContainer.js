@@ -1,38 +1,42 @@
-import React, { } from 'react';
-import customData from '../../customData/products.json'
+import React, {  } from 'react';
+import useCart from '../../hooks/useCart';
+import useProducts from '../../hooks/useProducts';
+
 import Product from '../Product/Product';
 
 
 
-const ProductContainer = (props) => {
-    
-    
-     
-    
-    
-    
-    const product = customData;
 
-    
-    const {cart, setCart} = props;
-    
 
+
+const ProductContainer = () => {
+    
+    const [products] = useProducts();
+    const [cart, setCart] = useCart(products);
    
-
-    const handleAddProduct = (product) => {
-        const newCart = [...cart, product];
-        setCart(newCart);
+    
+    
+    
+    const handleAddToCart = (product) => {
+        setCart(product);
     }
 
+    
+    
 
 
     return (
         <div className="container my-5">
             <h2 className="py-3 text-center">Latest Products</h2>
+            <h3>Cart Added: {cart.length}</h3>
 
             <div className="row row-cols-1 row-cols-md-3 g-4 my-3">
                 {
-                    product.map(product => <Product product={product} key={product.url} handleAddProduct={() => handleAddProduct(product)}></Product>)
+                    products.map(product => <Product 
+                        product = {product} 
+                        key= {product.key} 
+                        handleAddToCart = {handleAddToCart}
+                        ></Product>)
                 }
                 
 

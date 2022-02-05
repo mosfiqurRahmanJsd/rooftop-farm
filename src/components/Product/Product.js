@@ -8,6 +8,7 @@ import Rating from './../../../node_modules/@mui/material/Rating/Rating';
 
 const Product = (props) => {
 
+
     const { name, img, shortTitle, price, star } = props.product;
 
 
@@ -38,7 +39,7 @@ const Product = (props) => {
                   <Button 
                         variant="outline-info" 
                         href='#'
-                        onClick={props.handleAddProduct}
+                        onClick={() => props.handleAddToCart(props.product)}
                     
                     >Add To Cart <FontAwesomeIcon icon={faCartPlus} /></Button>
                     

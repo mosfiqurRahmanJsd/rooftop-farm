@@ -2,7 +2,7 @@ import React from 'react';
 import './Contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faFacebook, faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
     return (
@@ -17,7 +17,7 @@ const Contact = () => {
                         <div className="ms-5">
                         <p>To talk to our farmer, email farmer@rooftopfarm.com</p> 
                         <p>For press inquiries, email press@rooftopfarm.com</p> 
-                        <p>To learn more about volunteering, <Link className="text-info" href="/#">rooftopfarm.com/volunteer/</Link></p>
+                        <p>To learn more about volunteering, <Link className="text-info" to="#">rooftopfarm.com/volunteer/</Link></p>
                         <p>For information about our market and volunteer days, Follow:</p> 
                         </div>
                         <div className="div w-50">

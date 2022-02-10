@@ -14,6 +14,7 @@ import Header from "./components/Header/Header";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Contact from './components/Contact/Contact';
 import { createContext, useState } from "react";
+import AddProduct from "./components/AddProduct/AddProduct";
 
 
 
@@ -50,6 +51,7 @@ function App() {
               <Route path="/cart" element={<Cart />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/product/add" element={<AddProduct />} />
             </Routes>
           </Router>
         </main>

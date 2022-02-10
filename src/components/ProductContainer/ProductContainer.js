@@ -1,7 +1,7 @@
-import React, { } from 'react';
+import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { useContext } from 'react';
 import { UserContext } from '../../App';
-import useCart from '../../hooks/useCart';
 import useProducts from '../../hooks/useProducts';
 import { addToDb } from '../../utilities/fakedb';
 
@@ -14,10 +14,17 @@ import Product from '../Product/Product';
 
 const ProductContainer = () => {
 
-    const [products] = useProducts();
+    
 
     const {value2} = useContext(UserContext);
     const [cart, setCart] = value2;
+
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+       fetch('https://obscure-journey-61930.herokuapp.com/product')
+       .then(res => res.json())
+       .then(data => setProducts(data))
+    }, []);
        
     
     // const {value} = useContext(UserContext);
@@ -58,7 +65,7 @@ const ProductContainer = () => {
                 {
                     products.map(product => <Product
                         product={product}
-                        key={product.key}
+                        key={product._id}
                         handleAddToCart={handleAddToCart}
                     ></Product>)
                 }

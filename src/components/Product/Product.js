@@ -9,7 +9,7 @@ import Rating from './../../../node_modules/@mui/material/Rating/Rating';
 const Product = (props) => {
 
 
-    const { name, img, shortTitle, price, star } = props.product;
+    const { name, img, price, rating } = props.product;
 
 
 
@@ -25,7 +25,7 @@ const Product = (props) => {
                 </div>
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
-                    <p className="card-text">{shortTitle}</p>
+                    
                 </div>
 
 
@@ -33,7 +33,7 @@ const Product = (props) => {
                
                   <h3 className="align-items-center">$ {price}</h3>
 
-                  <Rating className="align-items-center" name="size-medium" defaultValue={star} />
+                  <Rating className="align-items-center" name="size-medium" defaultValue={rating} />
             
 
                   <Button 

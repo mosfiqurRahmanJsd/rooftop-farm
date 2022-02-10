@@ -3,15 +3,17 @@ import HomeProduct from '../HomeProduct/HomeProduct';
 
 const HomeProductContainer = () => {
 
-    const [product, setProduct] = useState([]);
+    const [products, setProducts] = useState([]);
 
-    const first9 = product.slice(0, 9);
+    const first9 = products.slice(0, 9);
     
     useEffect(() => {
-        fetch('./products.json')
-        .then(res => res.json())
-        .then(data => setProduct(data))
+       fetch('https://obscure-journey-61930.herokuapp.com/product')
+       .then(res => res.json())
+       .then(data => setProducts(data))
     }, []);
+    
+    
 
 
 
@@ -22,7 +24,7 @@ const HomeProductContainer = () => {
 
             <div className="row row-cols-1 row-cols-md-3 g-4 my-3">
                 {
-                    first9.map(product => <HomeProduct product={product} key={product.url}></HomeProduct>)
+                    first9.map(product => <HomeProduct product={product} key={product._id}></HomeProduct>)
                 }
                 
 

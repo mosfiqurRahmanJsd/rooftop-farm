@@ -5,12 +5,8 @@ import logo from './../../images/rooftop-farm-logo.png';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
-
-
-
-
-
-
+import { useContext, useState } from 'react';
+import { UserContext } from '../../App';
 
 
 
@@ -20,8 +16,20 @@ import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
     
+    const {value1} = useContext(UserContext);
+    const [loggedInUser, setLoggedInUser] = value1;
+
+    const {value2} = useContext(UserContext);
+    const [cart, setCart] = value2;
+
+    const [cartCount, setCartCount] = useState([]);
+
+   const length = cart.length;
+   
+    
     
 
+    
     
     return (
 
@@ -46,12 +54,15 @@ const Header = () => {
                             <Nav.Link href="/blog" className="text-info">Blog</Nav.Link>
                             <Nav.Link href="/product" className="text-info">Product</Nav.Link>
                             <Nav.Link href="/find" className="text-info">Find Rooftop</Nav.Link>
-                            <Nav.Link href="/cart" className="text-info">
-                               <FontAwesomeIcon icon={faCartPlus} /> 
+                            <Nav.Link href="/cart" className="text-info"> 
+                               <FontAwesomeIcon icon={faCartPlus} /> {length}
                             </Nav.Link>
 
                             
-                            <Button variant="outline-info" href='/login'>Login</Button>
+                            {
+                               ! loggedInUser.name ? <Button variant="outline-info" href='/login'>Login</Button> :
+                               <Button variant="outline-info" href='/login'>Log Out</Button>
+                            }
                             
 
                             

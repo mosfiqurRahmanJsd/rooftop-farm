@@ -1,5 +1,5 @@
 import Home from "./components/Home/Home";
-import React, { createContext, useEffect, useState } from "react";
+
 
 
 
@@ -13,31 +13,30 @@ import RooftopDetail from './components/RooftopDetail/RooftopDetail';
 import Header from "./components/Header/Header";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Contact from './components/Contact/Contact';
+import { createContext, useState } from "react";
 
 
 
-export const CartContext = createContext('ring');
+
+export const UserContext = createContext();
+
 
 
 
 function App() {
 
-  useEffect(() => {
-    
-  }, []);
-
-
+  
+  
   const [cart, setCart] = useState([]);
+  console.log(cart);
+  const [loggedInUser, setLoggedInUser] = useState([]);
   
-  // const cartValue = useMemo(() => ({cart, setCart}), [cart, setCart]);
-  
-  // console.log(cartValue);
   
 
   return (
 
     <div>
-      <CartContext.Provider value={[cart, setCart]}>
+      <UserContext.Provider value={{value1:[loggedInUser, setLoggedInUser], value2:[cart, setCart]}}>
         <main>
           <Header></Header>
           <Router>
@@ -54,7 +53,7 @@ function App() {
             </Routes>
           </Router>
         </main>
-      </CartContext.Provider>
+      </UserContext.Provider>
     </div>
   );
 }

@@ -11,7 +11,7 @@ const Contact = () => {
                 <h2 className="mb-5 text-center">Contact Us</h2>
                 <div className="row">
                     <div className="col-md-6">
-                        <img src="https://i.ibb.co/Gt5hwNc/orto.jpg" alt="" className="img-fluid rounded" />
+                        <img src="https://i.ibb.co/yN8s64J/orto.jpg" alt="" className="img-fluid rounded" />
                     </div>
                     <div className="col-md-6">
                         <div className="ms-5">

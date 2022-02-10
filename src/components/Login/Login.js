@@ -1,22 +1,47 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import React, {  } from 'react';
+import { Link, } from 'react-router-dom';
+import initializeAuthentication from '../../Firebase/firebase.initialize';
 import './Login.css';
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { useContext } from 'react';
+import { UserContext } from '../../App';
+
+initializeAuthentication();
+
+const provider = new GoogleAuthProvider();
+
 
 const Login = () => {
-    const googleSignIn = () => {
 
+    
+    const {value1} = useContext(UserContext);
+
+    const [loggedInUser, setLoggedInUser] = value1;
+
+
+
+    const handleGoogleSignIn = () => {
+        const auth = getAuth();
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                // This gives you a Google Access Token. You can use it to access the Google API.
+                
+                const {displayName, email, photoURL} = result.user;
+                const loggedInUser = {
+                    name: displayName,
+                    email : email,
+                    photo : photoURL
+                }
+                setLoggedInUser(loggedInUser);
+                // ...
+            }).catch((error) => {
+                // Handle Errors here.
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorCode, errorMessage);
+               
+            });
     }
-
-
-    const handleBlur = () => {
-
-    }
-
-    const handleSubmit = () => {
-
-    }
-
 
 
     return (
@@ -26,14 +51,14 @@ const Login = () => {
                     <div className="card-body p-2 p-md-5">
                         <h3 className="text-center">Login or Sign In</h3>
 
-                        <form onSubmit={handleSubmit}>
+                        <form>
                             <input
                                 className="form-control my-5 input"
                                 type="email"
                                 name="email"
                                 id=""
                                 placeholder="Email"
-                                onBlur={handleBlur}
+
                                 required
                             />
                             <input
@@ -42,7 +67,7 @@ const Login = () => {
                                 name="password"
                                 id=""
                                 placeholder="Password"
-                                onBlur={handleBlur}
+
                                 required
                             />
 
@@ -85,7 +110,7 @@ const Login = () => {
                 <div className="sign-in">
                     <div className="separator my-3">Or</div>
                     <button
-                        onClick={googleSignIn}
+                        onClick={handleGoogleSignIn}
                         className="google-btn btn border w-100 d-flex align-items-center"
                     >
                         <img

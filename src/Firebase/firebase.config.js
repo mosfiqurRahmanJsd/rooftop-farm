@@ -4,7 +4,7 @@ const firebaseConfig = {
     projectId: "rooftop-farm",
     storageBucket: "rooftop-farm.appspot.com",
     messagingSenderId: "907443164597",
-    appId: "1:907443164597:web:1758a9bd76a9f971eff5fc"
+    appId: "1:907443164597:web:938f688a6e11dad6eff5fc"
 };
 
 export default firebaseConfig;

@@ -1,13 +1,19 @@
-import React, {  } from 'react';
-import Rating from './../../../node_modules/@mui/material/Rating/Rating';
+
+import { Rating } from '@mui/material';
+import React from 'react';
+
+
+
+
 
 const HomeProduct = (props) => {
     
 
 
-    const { name, img, price, rating } = props.product;
+    const { name, img, price, star } = props.product;
 
-
+    const rating = Number(star);
+    
 
     return (
         <div className="col">
@@ -24,7 +30,9 @@ const HomeProduct = (props) => {
            
               <h3 className="align-items-center">$ {price}</h3>
 
-              <Rating className="align-items-center" name="size-medium" defaultValue={rating} />
+              
+
+              <Rating value={rating} />
         
 
                 

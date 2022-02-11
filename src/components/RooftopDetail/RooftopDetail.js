@@ -1,4 +1,4 @@
-import React, {  } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, } from 'react-router-dom';
 import './RooftopDetail.css';
 
@@ -6,35 +6,40 @@ import './RooftopDetail.css';
 
 
 const RooftopDetail = () => {
-    const { rooftopKey } = useParams();
+    const { id } = useParams();
+    
    
-    // const [rooftop, setRooftop] = useState({});
+    const [rooftop, setRooftop] = useState([]);
+
+    console.log(rooftop);
+    const {name, detail, bigImg, title, url, img,} = rooftop;
 
     
-    // useEffect(() => {
-    //     fetch(`./products.json/${rooftopKey}`)
-    //     .then(res => res.json())
-    //     .then(data => setRooftop(data))
-    // }, []);
+    useEffect(() => {
+        fetch(`https://obscure-journey-61930.herokuapp.com/rooftop/${id}`)
+        .then(res => res.json())
+        .then(data => setRooftop(data))
+    }, [id]);
 
-    // console.log(rooftop);
+
 
     
 
 
     return (
         <div className="rooftop-detail container">
-            <h1>{rooftopKey}</h1>
-            {/* <div className="row">
-                <div className="col-md-4">
+            <h1 className="d-flex justify-content-center mb-5">{name}</h1>
+            <div className="row">
+                <div className="col-md-6">
+                    <img className="img-fluid" src={bigImg} alt="" />
+                    <a href={url}> {url}</a>
                     <img src={img} alt="" />
                 </div>
                 <div className="col-md-6">
-                    <h2>{}</h2>
-                    <p>{description}</p>
-                    <a target="_blank" href={url}> {url}</a>
+                    <h2>{title}</h2>
+                    <p style={{textAlign: 'justify'}}>{detail}</p>
                 </div>
-            </div> */}
+            </div>
         </div>
     );
 }

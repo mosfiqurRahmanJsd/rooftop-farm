@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Rooftop = (props) => {
 
-    const pd = props.pd;
+    const roof = props.roof;
 
 
 
@@ -15,14 +15,14 @@ const Rooftop = (props) => {
         <div className="col">
             <div className="card h-100">
                 <div className="card-img">
-                    <img className="img-fluid" src={pd.img} alt="" />
+                    <img className="w-100" src={roof.img} alt="" />
                 </div>
-                <div className="card-body">
-                    <h5 className="card-title">{pd.name}</h5>
-                    <p className="card-text">{pd.shortTitle}</p>
+                <div className="card-body mx-auto">
+                    <h5 className="card-title ">{roof.name}</h5>
+                    
                 </div>
 
-                <Link to={`/rooftopDetails/${pd.key}`} type="button" className="btn  card-footer">View</Link>
+                <Link to={`/rooftop/${roof._id}`} type="button" className="btn  card-footer">View</Link>
 
 
                 

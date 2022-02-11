@@ -1,7 +1,7 @@
 import { Button, Nav, Navbar } from 'react-bootstrap';
 import Container from './../../../node_modules/react-bootstrap/esm/Container';
 
-import logo from './../../images/rooftop-farm-logo.png';
+
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
@@ -39,7 +39,7 @@ const Header = () => {
             <Navbar variant="" expand="md" fixed="top" className="bg-color bg-light">
                 <Container>
                     <Navbar.Brand href="/" className="header">
-                        <img className="img-fluid" src={logo} alt="" />
+                        <img className="img-fluid" src="https://i.ibb.co/NCnsL9f/rooftop-farm-logo.png" alt="" />
 
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />

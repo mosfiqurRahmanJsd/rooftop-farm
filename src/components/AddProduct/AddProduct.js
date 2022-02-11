@@ -12,11 +12,11 @@ export default function AddProduct() {
     const handleAddProduct = (e) => {
         const name = nameRef.current.value;
         const img = imgRef.current.value;
-        const rating = starRef.current.value;
+        const star = starRef.current.value;
         const price = priceRef.current.value;
        
 
-        const newProduct = { name, img, rating, price };
+        const newProduct = { name, img, star, price };
 
         fetch('https://obscure-journey-61930.herokuapp.com/product', {
             method: 'POST',

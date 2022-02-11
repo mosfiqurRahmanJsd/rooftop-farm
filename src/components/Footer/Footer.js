@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footer.css';
-import logo from './../../images/rooftop-farm-logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faFacebook, faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
 
@@ -40,7 +39,7 @@ const Footer = () => {
                     </div>
                     <div className="col-12 col-sm-6 col-md-2">
                         
-                        <img className="img-fluid" src={logo} alt="" />
+                        <img className="img-fluid" src="https://i.ibb.co/NCnsL9f/rooftop-farm-logo.png" alt="" />
                         
                         <ul className="list-unstyled mt-4 d-flex justify-content-around social-icon">
                             <li><a className="text-decoration-none" href="#0"><FontAwesomeIcon icon={faFacebook} /></a></li>

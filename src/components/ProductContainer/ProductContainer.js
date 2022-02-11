@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useContext } from 'react';
 import { UserContext } from '../../App';
-import useProducts from '../../hooks/useProducts';
 import { addToDb } from '../../utilities/fakedb';
 
 import Product from '../Product/Product';

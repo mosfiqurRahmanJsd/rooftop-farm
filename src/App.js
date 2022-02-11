@@ -15,6 +15,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Contact from './components/Contact/Contact';
 import { createContext, useState } from "react";
 import AddProduct from "./components/AddProduct/AddProduct";
+import AddRooftop from "./components/AddRooftop/AddRooftop";
 
 
 
@@ -29,7 +30,6 @@ function App() {
   
   
   const [cart, setCart] = useState([]);
-  console.log(cart);
   const [loggedInUser, setLoggedInUser] = useState([]);
   
   
@@ -46,12 +46,13 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/product" element={<ProductContainer />} />
-              <Route path="/rooftopDetails/:rooftopKey" element={<RooftopDetail />} />
+              <Route path="/rooftop/:id" element={<RooftopDetail />} />
               <Route path="/find/" element={<FindRooftop />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/product/add" element={<AddProduct />} />
+              <Route path="/rooftop/add" element={<AddRooftop />} />
             </Routes>
           </Router>
         </main>

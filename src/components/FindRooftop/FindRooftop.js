@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
-import useProducts from '../../hooks/useProducts';
+import React, { useEffect, useState } from 'react';
 import './FindRooftop.css';
 
 const FindRooftop = () => {
 
-    const [products] = useProducts();
+    
+    const [rooftop, setRooftop] = useState([]);
+    useEffect(() => {
+       fetch('https://obscure-journey-61930.herokuapp.com/rooftop')
+       .then(res => res.json())
+       .then(data => setRooftop(data))
+    }, []);
+ 
     
 
     const [displayRooftop, setDisplayRooftop] = useState([]);
@@ -15,7 +21,7 @@ const FindRooftop = () => {
 
     const handleSearch = event => {
         const searchText = event.target.value;
-        const matchedRooftop = products.filter( product => product.name.toLowerCase().includes(searchText.toLowerCase()));
+        const matchedRooftop = rooftop.filter( rooftop => rooftop.name.toLowerCase().includes(searchText.toLowerCase()));
         setDisplayRooftop(matchedRooftop);
     }
 
@@ -27,7 +33,7 @@ const FindRooftop = () => {
             <div className="container find">
                 <div className="input-group mb-3">
                     <input 
-                        placeholder="Find Rooftop" 
+                        placeholder="Please Type Rooftop Farm Name..." 
                         className="form-control" 
                         type="text" 
                         onChange={handleSearch}
@@ -38,7 +44,7 @@ const FindRooftop = () => {
                 <div className="row">
                     {
                         displayRooftop.map(rooftop => (
-                            <div key={rooftop.key} className="col-md-4 mb-3">
+                            <div key={rooftop._id} className="col-md-4 mb-3">
                                 <div className="card h-100">
                                     <div className="card-img">
                                         <img className="img-fluid" src={rooftop.img} alt="" />

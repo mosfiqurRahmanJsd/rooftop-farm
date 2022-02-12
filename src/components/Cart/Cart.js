@@ -1,10 +1,10 @@
 import React, { } from 'react';
 import useCart from '../../hooks/useCart';
-import useProducts from '../../hooks/useProducts';
 import CartItem from '../CartItem/CartItem';
 
 import './Cart.css';
 import { Button } from 'react-bootstrap';
+import useProducts from '../../hooks/useProducts';
 
 
 const Cart = () => {
@@ -21,7 +21,7 @@ const Cart = () => {
             <div className="row">
                 <div className="col-md-8">
                     {
-                        cart.map(singleCart => <CartItem singleCart = {singleCart} key= {singleCart.key}></CartItem>)
+                        cart.map(singleCart => <CartItem singleCart = {singleCart} key= {singleCart._id}></CartItem>)
                     
                     }
                 </div>

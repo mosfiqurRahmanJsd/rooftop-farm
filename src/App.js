@@ -30,6 +30,7 @@ function App() {
   
   
   const [cart, setCart] = useState([]);
+  
   const [loggedInUser, setLoggedInUser] = useState([]);
   
   

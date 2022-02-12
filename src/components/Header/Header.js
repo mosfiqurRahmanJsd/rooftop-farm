@@ -1,11 +1,9 @@
 import { Button, Nav, Navbar } from 'react-bootstrap';
 import Container from './../../../node_modules/react-bootstrap/esm/Container';
-
-
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { UserContext } from '../../App';
 
 
@@ -21,10 +19,13 @@ const Header = () => {
 
     const {value2} = useContext(UserContext);
     const [cart, setCart] = value2;
+    console.log(cart.length);
+    
 
-    const [cartCount, setCartCount] = useState([]);
 
-   const length = cart.length;
+
+
+
    
     
     
@@ -55,7 +56,7 @@ const Header = () => {
                             <Nav.Link href="/product" className="text-info">Product</Nav.Link>
                             <Nav.Link href="/find" className="text-info">Find Rooftop</Nav.Link>
                             <Nav.Link href="/cart" className="text-info"> 
-                               <FontAwesomeIcon icon={faCartPlus} /> {length}
+                               <FontAwesomeIcon icon={faCartPlus} /> {cart.length}
                             </Nav.Link>
 
                             

@@ -1,72 +1,90 @@
 import React from 'react';
 import './Contact.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitter, faFacebook, faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
-import { Link } from 'react-router-dom';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { Avatar } from '@mui/material';
 
 const Contact = () => {
     return (
         <div>
             <div className="container contact-us">
-                <h2 className="mb-5 text-center">Contact Us</h2>
-                <div className="row my-3">
-                    <h3 className="py-2">Admin</h3>
-                    <div className="col-md-4">
-                        <Avatar
-                            alt="Remy Sharp"
-                            src="https://pickaface.net/gallery/avatar/20120117_083743_291_Demo.png"
-                            sx={{ width: 260, height: 260 }}
-                        />
-                        <h4>Remy Sharp</h4>
-
-                        <p className="text-info"><FontAwesomeIcon icon={faEnvelope} />demo@gmail.com</p>
-                    </div>
-                    <div className="col-md-4">
-                        <Avatar
-                            alt="Remy Sharp"
-                            src="https://pickaface.net/gallery/avatar/20120117_083743_291_Demo.png"
-                            sx={{ width: 260, height: 260 }}
-                        />
-                        <h4>Remy Sharp</h4>
-
-                        <p className="text-info"><FontAwesomeIcon icon={faEnvelope} />demo@gmail.com</p>
-                    </div>
-                    <div className="col-md-4">
-                        <Avatar
-                            alt="Remy Sharp"
-                            src="https://pickaface.net/gallery/avatar/20120117_083743_291_Demo.png"
-                            sx={{ width: 260, height: 260 }}
-                        />
-                        <h4>Remy Sharp</h4>
-
-                        <p className="text-info"><FontAwesomeIcon icon={faEnvelope} />demo@gmail.com</p>
-                    </div>
-                </div>
+                <h4 className="mb-4 text-center"> <strong>Rooftop Farming For Green Cities:</strong> A Step Towards Urban Fresh Natural Food By Using Web Application.</h4>
                 <div className="row">
-                    <div className="col-md-6">
-                        <img src="https://i.ibb.co/yN8s64J/orto.jpg" alt="" className="img-fluid rounded" />
-                    </div>
-                    <div className="col-md-6">
-                        <div className="ms-5">
-                        <p>To talk to our farmer, email farmer@rooftopfarm.com</p> 
-                        <p>For press inquiries, email press@rooftopfarm.com</p> 
-                        <p>To learn more about volunteering, <Link className="text-info" to="#">rooftopfarm.com/volunteer/</Link></p>
-                        <p>For information about our market and volunteer days, Follow:</p> 
+                    
+                    <div className="col-md-6 d-flex align-items-center justify-content-evenly">
+                        <Avatar
+                            alt="Dr. S. M. Aminul Haque"
+                            src="https://i.ibb.co/wC0KVgt/photo-2021-03-28-22-25-16.jpg"
+                            sx={{ width: 260, height: 260 }}
+                        />
+                        <div className="mt-2">
+                            <h5>Supervised By</h5>
+                            <h4 className="fst-italic">Dr. S. M. Aminul Haque</h4>
+                            <h6 className="fw-bolder">Associate Professor and Associate Head</h6>
+                            <p className="m-0">Department of CSE</p>
+                            <p className="m-0">Daffodil International University</p>
                         </div>
-                        <div className="div w-50">
-                        <ul className="list-unstyled mt-4 d-flex justify-content-around social-icon">
-                            <li><a className="text-decoration-none" href="/#"><FontAwesomeIcon icon={faFacebook} /></a></li>
-                            <li><a className="text-decoration-none " href="/#"><FontAwesomeIcon icon={faTwitter} /></a></li>
-                            <li><a className="text-decoration-none" href="/#"><FontAwesomeIcon icon={faInstagramSquare} /></a></li>
-                           
-                        </ul>
-                        </div>
-                    </div>
-                </div>
 
+                    </div>
+                    <div className="col-md-6 d-flex align-items-center justify-content-evenly">
+                        <Avatar
+                            alt="Mr. Mohammad Jahangir Alam"
+                            src="https://i.ibb.co/qYfZHzH/AMINIL.jpg"
+                            sx={{ width: 260, height: 260 }}
+                        />
+                        <div className="mt-2">
+                            <h5>Co-Supervised By</h5>
+                            <h4 className="fst-italic">Mr. Mohammad Jahangir Alam</h4>
+                            <h6 className="fw-bolder">Senior Lecturer</h6>
+                            
+                            <p className="m-0">Department of CSE</p>
+                            <p className="m-0">Daffodil International University</p>
+                        </div>
+
+                    </div>
+                
+                </div>
+                
             </div>
+
+
+            <div className="container contact-us">
+                <h3 className="text-center"> <strong>Submitted By :</strong> </h3>
+                <div className="row">
+                    
+                    <div className="col-md-6 d-flex align-items-center justify-content-evenly">
+                        <Avatar
+                            alt="Md. Naimul Islam"
+                            src="https://i.ibb.co/Bz5y1sY/Naimul.jpg"
+                            sx={{ width: 260, height: 260 }}
+                        />
+                        <div className="mt-2">
+                            <h4>Md. Naimul Islam</h4>
+                            <h6 className="fw-bolder">DIU ID : 181-15-1885</h6>
+                            <p className="m-0">Department of CSE</p>
+                            <p className="m-0">Daffodil International University</p>
+                        </div>
+
+                    </div>
+                    <div className="col-md-6 d-flex align-items-center justify-content-evenly">
+                        <Avatar
+                            alt="Fateha Nasrin"
+                            src="https://i.ibb.co/bvq66HY/nasrin.jpg"
+                            sx={{ width: 260, height: 260 }}
+                        />
+                       <div className="mt-2">
+                            <h4>Fateha Nasrin</h4>
+                            <h6 className="fw-bolder">DIU ID : 181-15-1900</h6>
+                            <p className="m-0">Department of CSE</p>
+                            <p className="m-0">Daffodil International University</p>
+                        </div>
+
+                    </div>
+                
+                </div>
+                
+            </div>
+
+
+
         </div>
     );
 }

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
-import { useContext } from 'react';
-import { UserContext } from '../../App';
+
 import { addToDb, getStoredCart } from '../../utilities/fakedb';
+
+
 
 import Product from '../Product/Product';
 
@@ -15,10 +16,17 @@ const ProductContainer = () => {
 
 
 
-    const { value2 } = useContext(UserContext);
-    const [cart, setCart] = value2;
+    const [cart, setCart] = useState([]);
+    
+    console.log(cart);
 
     const [products, setProducts] = useState([]);
+
+
+    
+
+    
+    
     useEffect(() => {
         fetch('https://obscure-journey-61930.herokuapp.com/product')
             .then(res => res.json())
@@ -28,13 +36,17 @@ const ProductContainer = () => {
 
 
     useEffect(() => {
-        
         if (products.length) {
             const savedCart = getStoredCart();
             const storedCart = [];
             for (const _id in savedCart) {
                 const addedProduct = products.find(product => product._id === _id);
-                storedCart.push(addedProduct);
+                if(addedProduct) {
+                    const quantity = savedCart[_id];
+                    addedProduct.quantity = quantity;
+                    storedCart.push(addedProduct);
+                }
+                
             }
             setCart(storedCart);
         }
@@ -47,23 +59,23 @@ const ProductContainer = () => {
 
 
 
-    const handleAddToCart = (products) => {
-        const exists = cart.find(pd => pd.key === products.key);
-        let newCart = [];
-        if (exists) {
-            const rest = cart.filter(pd => pd.key !== products.key);
-            exists.quantity = exists.quantity + 1;
-            newCart = [...rest, products];
-        }
-        else {
-            products.quantity = 1;
-            newCart = [...cart, products];
-        }
+    const handleAddToCart = (product) => {
+    //    const newCart = [...cart, product];
 
-        // save to local storage (for now)
-        addToDb(products._id);
-        setCart(newCart);
-
+       const exists = cart.find(pd => pd.key === products.key);
+       let newCart = [];
+       if (exists) {
+           const rest = cart.filter(pd => pd.key !== products.key);
+           exists.quantity = exists.quantity + 1;
+           newCart = [...rest, products];
+       }
+       else {
+           products.quantity = 1;
+           newCart = [...cart, products];
+       }
+       setCart(newCart);
+       //    save to local storage
+       addToDb(product._id);
     }
 
 
@@ -78,6 +90,7 @@ const ProductContainer = () => {
                 {
                     products.map(product => <Product
                         product={product}
+                        _id={product._id}
                         key={product._id}
                         handleAddToCart={handleAddToCart}
                     ></Product>)

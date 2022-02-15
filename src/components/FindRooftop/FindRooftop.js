@@ -33,7 +33,7 @@ const FindRooftop = () => {
             <div className="container find">
                 <div className="input-group mb-3">
                     <input 
-                        placeholder="Please Type Rooftop Farm Name..." 
+                        placeholder="please ! type text to search..." 
                         className="form-control" 
                         type="text" 
                         onChange={handleSearch}

@@ -19,7 +19,8 @@ const Header = () => {
 
     const {value2} = useContext(UserContext);
     const [cart, setCart] = value2;
-    console.log(cart.length);
+
+    console.log(cart);
     
 
 

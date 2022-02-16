@@ -41,7 +41,7 @@ const Header = () => {
             <Navbar variant="" expand="md" fixed="top" className="bg-color bg-light">
                 <Container>
                     <Navbar.Brand href="/" className="header">
-                        <img className="img-fluid" src="https://i.ibb.co/NCnsL9f/rooftop-farm-logo.png" alt="" />
+                        <img className="img-fluid" src="https://i.ibb.co/LQQ2swW/rooftop-farm-logo.png" alt="" />
 
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
@@ -52,10 +52,11 @@ const Header = () => {
                             navbarScroll
                         >
                             <Nav.Link href="/" className="text-info">Home</Nav.Link>
-                            <Nav.Link href="/contact" className="text-info">Contact</Nav.Link>
+                            
                             <Nav.Link href="/blog" className="text-info">Blog</Nav.Link>
                             <Nav.Link href="/product" className="text-info">Product</Nav.Link>
                             <Nav.Link href="/find" className="text-info">Find Rooftop</Nav.Link>
+                            <Nav.Link href="/contact" className="text-info">Contact</Nav.Link>
                             <Nav.Link href="/cart" className="text-info"> 
                                <FontAwesomeIcon icon={faCartPlus} /> {cart.length}
                             </Nav.Link>

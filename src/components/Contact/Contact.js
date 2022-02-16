@@ -12,7 +12,7 @@ const Contact = () => {
                     <div className="col-md-6 d-flex align-items-center justify-content-evenly">
                         <Avatar
                             alt="Dr. S. M. Aminul Haque"
-                            src="https://i.ibb.co/wC0KVgt/photo-2021-03-28-22-25-16.jpg"
+                            src="https://i.ibb.co/nLM80Hh/AMINIL.jpg"
                             sx={{ width: 260, height: 260 }}
                         />
                         <div className="mt-2">
@@ -27,7 +27,7 @@ const Contact = () => {
                     <div className="col-md-6 d-flex align-items-center justify-content-evenly">
                         <Avatar
                             alt="Mr. Mohammad Jahangir Alam"
-                            src="https://i.ibb.co/qYfZHzH/AMINIL.jpg"
+                            src="https://i.ibb.co/TthgkS3/photo-2021-03-28-22-25-16-1.jpg"
                             sx={{ width: 260, height: 260 }}
                         />
                         <div className="mt-2">
@@ -46,14 +46,14 @@ const Contact = () => {
             </div>
 
 
-            <div className="container contact-us">
+            <div className="container mt-5">
                 <h3 className="text-center"> <strong>Submitted By :</strong> </h3>
                 <div className="row">
                     
                     <div className="col-md-6 d-flex align-items-center justify-content-evenly">
                         <Avatar
                             alt="Md. Naimul Islam"
-                            src="https://i.ibb.co/Bz5y1sY/Naimul.jpg"
+                            src="https://i.ibb.co/TBzZQjc/Naimul.jpg"
                             sx={{ width: 260, height: 260 }}
                         />
                         <div className="mt-2">
@@ -67,7 +67,7 @@ const Contact = () => {
                     <div className="col-md-6 d-flex align-items-center justify-content-evenly">
                         <Avatar
                             alt="Fateha Nasrin"
-                            src="https://i.ibb.co/bvq66HY/nasrin.jpg"
+                            src="https://i.ibb.co/Qn28fCv/nasrin.jpg"
                             sx={{ width: 260, height: 260 }}
                         />
                        <div className="mt-2">

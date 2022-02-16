@@ -31,7 +31,7 @@ const RooftopDetail = () => {
             <h1 className="d-flex justify-content-center mb-5">{name}</h1>
             <div className="row">
                 <div className="col-md-6">
-                    <img className="img-fluid" src={bigImg} alt="" />
+                    <img className="w-100" src={bigImg} alt="" />
                     <a href={url}> {url}</a>
                     <img src={img} alt="" />
                 </div>

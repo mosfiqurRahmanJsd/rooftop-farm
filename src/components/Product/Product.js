@@ -3,17 +3,18 @@ import { Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import './Product.css'
-import Rating from './../../../node_modules/@mui/material/Rating/Rating';
+import { Rating } from '@mui/material';
+
 
 
 const Product = (props) => {
 
 
-    const { name, img, price, rating } = props.product;
+    const { name, img, price, star } = props.product;
 
 
-
-
+    const rating = parseFloat(star);
+    
 
 
     return (
@@ -25,24 +26,25 @@ const Product = (props) => {
                 </div>
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
-                    
+
                 </div>
 
 
                 <div className="card-footer bg-white border-0 mb-2 d-flex d-flex justify-content-between aligns-items-center">
-               
-                  <h3 className="align-items-center">$ {price}</h3>
 
-                  <Rating className="align-items-center" name="size-medium" defaultValue={rating} />
-            
+                    <h3 className="align-items-center">$ {price}</h3>
 
-                  <Button 
-                        variant="outline-info" 
+                   
+                    <Rating  value={rating} />
+
+
+                    <Button
+                        variant="outline-info"
                         href='#'
                         onClick={() => props.handleAddToCart(props.product)}
-                    
+
                     >Add To Cart <FontAwesomeIcon icon={faCartPlus} /></Button>
-                    
+
                 </div>
 
 

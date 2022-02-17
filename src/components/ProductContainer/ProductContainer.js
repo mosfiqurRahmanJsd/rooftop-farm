@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { useEffect } from 'react';
+import useProducts from '../../hooks/useProducts';
+import { addToDb } from '../../utilities/fakedb';
 
-import { addToDb, getStoredCart } from '../../utilities/fakedb';
+
 
 
 
@@ -18,66 +19,19 @@ const ProductContainer = () => {
 
     const [cart, setCart] = useState([]);
     
-    console.log(cart);
-
-    const [products, setProducts] = useState([]);
-
-
     
-
-    
-    
-    useEffect(() => {
-        fetch('https://obscure-journey-61930.herokuapp.com/product')
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, []);
-
-
-
-    useEffect(() => {
-        if (products.length) {
-            const savedCart = getStoredCart();
-            const storedCart = [];
-            for (const _id in savedCart) {
-                const addedProduct = products.find(product => product._id === _id);
-                if(addedProduct) {
-                    const quantity = savedCart[_id];
-                    addedProduct.quantity = quantity;
-                    storedCart.push(addedProduct);
-                }
-                
-            }
-            setCart(storedCart);
-        }
-    }, [products]);
-
-
-
-
-
+    const [products] = useProducts();
 
 
 
     const handleAddToCart = (product) => {
-    //    const newCart = [...cart, product];
+        const newCart = [...cart, product];
+        setCart(newCart);
+        
 
-       const exists = cart.find(pd => pd.key === products.key);
-       let newCart = [];
-       if (exists) {
-           const rest = cart.filter(pd => pd.key !== products.key);
-           exists.quantity = exists.quantity + 1;
-           newCart = [...rest, products];
-       }
-       else {
-           products.quantity = 1;
-           newCart = [...cart, products];
-       }
-       setCart(newCart);
-       //    save to local storage
-       addToDb(product._id);
+        // save to to local storage
+        addToDb(product._id);
     }
-
 
 
 

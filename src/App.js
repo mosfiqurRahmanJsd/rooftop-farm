@@ -13,9 +13,10 @@ import RooftopDetail from './components/RooftopDetail/RooftopDetail';
 import Header from "./components/Header/Header";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Contact from './components/Contact/Contact';
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import AddProduct from "./components/AddProduct/AddProduct";
 import AddRooftop from "./components/AddRooftop/AddRooftop";
+import { getStoredCart } from "./utilities/fakedb";
 
 
 
@@ -27,18 +28,50 @@ export const UserContext = createContext();
 
 function App() {
 
-  
-  
+
   const [cart, setCart] = useState([]);
-  
+  console.log(cart);
+
   const [loggedInUser, setLoggedInUser] = useState([]);
-  
-  
+
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch('https://obscure-journey-61930.herokuapp.com/product')
+      .then(res => res.json())
+      .then(data => setProducts(data))
+  }, []);
+
+  useEffect(() => {
+    if (products.length) {
+      const savedCart = getStoredCart();
+      const storedCart = [];
+      for (const _id in savedCart) {
+        const addedProduct = products.find(product => product._id === _id);
+        if (addedProduct) {
+          const quantity = savedCart[_id];
+          addedProduct.quantity = quantity;
+          storedCart.push(addedProduct);
+        }
+      }
+      setCart(storedCart);
+    }
+  }, [products]);
+
+
+
+
+
+
+
+
+
 
   return (
 
     <div>
-      <UserContext.Provider value={{value1:[loggedInUser, setLoggedInUser], value2:[cart, setCart]}}>
+      <UserContext.Provider value={{ value1: [loggedInUser, setLoggedInUser], value2: [cart] }}>
         <main>
           <Header></Header>
           <Router>

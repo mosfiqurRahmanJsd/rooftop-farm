@@ -1,9 +1,10 @@
 import React, {  } from 'react';
 import Footer from '../Footer/Footer';
-import HomeProductContainer from '../HomeProductContainer/HomeProductContainer';
+
 import ReviewContainer from '../ReviewContainer/ReviewContainer';
 import RooftopContainer from './../RooftopContainer/RooftopContainer';
 import Slider from './../Slider/Slider';
+import ProductContainer from './../ProductContainer/ProductContainer';
 
 
 
@@ -19,7 +20,7 @@ const Home = () => {
         <>
             <Slider></Slider>
             <RooftopContainer></RooftopContainer>
-            <HomeProductContainer></HomeProductContainer>
+            <ProductContainer></ProductContainer>
             <ReviewContainer></ReviewContainer>
             <Footer></Footer>
 

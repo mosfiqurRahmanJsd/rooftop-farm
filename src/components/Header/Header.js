@@ -15,12 +15,12 @@ import { UserContext } from '../../App';
 const Header = () => {
     
     const {value1} = useContext(UserContext);
-    const [loggedInUser, setLoggedInUser] = value1;
+    const [loggedInUser] = value1;
 
     const {value2} = useContext(UserContext);
-    const [cart, setCart] = value2;
+    const [cart] = value2;
+    
 
-    console.log(cart);
     
 
 
@@ -52,10 +52,9 @@ const Header = () => {
                             navbarScroll
                         >
                             <Nav.Link href="/" className="text-info">Home</Nav.Link>
-                            
-                            <Nav.Link href="/blog" className="text-info">Blog</Nav.Link>
-                            <Nav.Link href="/product" className="text-info">Product</Nav.Link>
                             <Nav.Link href="/find" className="text-info">Find Rooftop</Nav.Link>
+                            <Nav.Link href="/product" className="text-info">Product</Nav.Link>
+                            <Nav.Link href="/blog" className="text-info">Blog</Nav.Link>
                             <Nav.Link href="/contact" className="text-info">Contact</Nav.Link>
                             <Nav.Link href="/cart" className="text-info"> 
                                <FontAwesomeIcon icon={faCartPlus} /> {cart.length}

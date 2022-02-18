@@ -2,25 +2,36 @@ import React, { useRef } from 'react';
 import './AddRooftop.css';
 
 const AddRooftop = () => {
-    const nameRef = useRef()
-    const imgRef = useRef()
-    const detailRef = useRef()
-    const urlRef = useRef()
-    const bigImgRef = useRef()
-    const titleRef = useRef()
+    const squareRef = useRef()
+    const locationRef = useRef()
+    const imgRef = useRef();
+    const mapRef = useRef();
+    const detailRef = useRef();
+    const moreDetailRef = useRef();
+    const phoneRef = useRef();
+    const emailRef = useRef();
+    const priceRef = useRef();
 
    
 
     const handleAddProduct = (e) => {
-        const name = nameRef.current.value;
-        const img = imgRef.current.value;
-        const detail = detailRef.current.value;
-        const url = urlRef.current.value;
-        const bigImg = bigImgRef.current.value;
-        const title = titleRef.current.value;
+        const squareFeet = squareRef.current.value;
+        const location = locationRef.current.value;
+        const image = imgRef.current.value;
+        const googleMap = mapRef.current.value; 
+        const someDetail = detailRef.current.value;
+        const moreDetail = moreDetailRef.current.value;
+        const phone = phoneRef.current.value;
+        const email = emailRef.current.value;
+        const price = priceRef.current.value;
+
+
+
+
+       
        
 
-        const newRooftop = { name, img, detail, url, bigImg, title };
+        const newRooftop = { squareFeet, location, image, googleMap, someDetail, moreDetail, phone, email, price };
 
         fetch('https://obscure-journey-61930.herokuapp.com/rooftop', {
             method: 'POST',
@@ -49,27 +60,38 @@ const AddRooftop = () => {
         <div className="add-rooftop container">
             <h1>Add a New Rooftop Farm</h1>
             <form onSubmit={handleAddProduct} className="form-inline">
+                    <h1>Rooftop Details :</h1>
                 
-                    <label htmlFor="rooftopName">Rooftop Farm Name :</label>
-                    <input type="text" id="rooftopName" ref={nameRef} /> <br />
+                    <label htmlFor="squareFeet">How many square feet? :</label>
+                    <input type="number" id="squareFeet" ref={squareRef} /> <br />
 
-                    <label htmlFor="rooftopTitle">Rooftop Farm Title :</label>
-                    <input type="text" id="rooftopTitle" ref={titleRef} /> <br />
+                    <label htmlFor="location">Location :</label>
+                    <input type="text" id="squareFeet" ref={locationRef} /> <br />
+
+                    <label htmlFor="googleMap">Google map location URL :</label>
+                    <input type="url" ref={mapRef} id="googleMap" /> <br />
+
+
+                  
+                    <label htmlFor="someDetails">Some Details :</label>
+                    <input type="text" ref={detailRef} id="someDetails" /> <br />
+
+                    <label htmlFor="moreDetails">More Details :</label>
+                    <input type="text" ref={moreDetailRef} id="moreDetails" /> <br />
+
+                    <label htmlFor="phoneNumber">Phone Number :</label>
+                    <input type="number" ref={phoneRef} id="phoneNumber" /> <br />
+
+                    
+
+                    <label htmlFor="email">E-mail :</label>
+                    <input type="email" ref={emailRef} id="email" /> <br />
+
+
+                    
                 
-                    <label htmlFor="rooftopImg">Rooftop Image URL :</label>
-                    <input type="url" ref={imgRef} id="rooftopImg" /> <br />
-
-
-                    <label htmlFor="bigImg">Rooftop Details Image URL :</label>
-                    <input type="url" ref={bigImgRef} id="bigImg" /> <br />
-               
-               
-                    <label htmlFor="rooftopDetails">Rooftop Farm Details :</label>
-                    <input type="text" ref={detailRef} id="rooftopDetails" /> <br />
-                
-                    <label htmlFor="rooftopUrl">Rooftop URL :</label>
-                    <input type="url" ref={urlRef} id="rooftopUrl" />
-               
+                    <label htmlFor="price">Price thousand only:</label>
+                    <input type="number" ref={priceRef} id="price" /> <br />
                 
                 
                 

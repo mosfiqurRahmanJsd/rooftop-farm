@@ -15,7 +15,7 @@ const Contact = () => {
                             src="https://i.ibb.co/nLM80Hh/AMINIL.jpg"
                             sx={{ width: 260, height: 260 }}
                         />
-                        <div className="mt-2">
+                        <div className="mt-2 ps-2">
                             <h5>Supervised By</h5>
                             <h4 className="fst-italic">Dr. S. M. Aminul Haque</h4>
                             <h6 className="fw-bolder">Associate Professor and Associate Head</h6>
@@ -30,7 +30,7 @@ const Contact = () => {
                             src="https://i.ibb.co/TthgkS3/photo-2021-03-28-22-25-16-1.jpg"
                             sx={{ width: 260, height: 260 }}
                         />
-                        <div className="mt-2">
+                        <div className="mt-2 ps-4">
                             <h5>Co-Supervised By</h5>
                             <h4 className="fst-italic">Mr. Mohammad Jahangir Alam</h4>
                             <h6 className="fw-bolder">Senior Lecturer</h6>

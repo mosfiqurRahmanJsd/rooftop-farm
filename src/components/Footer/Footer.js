@@ -50,7 +50,7 @@ const Footer = () => {
 
                     </div>
                 </div>
-                <p className="text-center footer-p py-3">Copyright © 2022 Rooftop Farm All Right Reserve</p>
+                <p className="text-center footer-p py-3">Copyright © 2022 virtual thinker of Rooftop Farm</p>
             </div>
         </footer>
     );

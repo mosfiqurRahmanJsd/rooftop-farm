@@ -1,27 +1,33 @@
 import React, { useEffect, useState } from 'react';
 import './FindRooftop.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMapMarkerAlt, faBorderAll, faMoneyBill } from '@fortawesome/free-solid-svg-icons';
 
 const FindRooftop = () => {
 
-    
+
     const [rooftop, setRooftop] = useState([]);
-    useEffect(() => {
-       fetch('https://obscure-journey-61930.herokuapp.com/rooftop')
-       .then(res => res.json())
-       .then(data => setRooftop(data))
-    }, []);
- 
-    
+
+
 
     const [displayRooftop, setDisplayRooftop] = useState([]);
 
-    
+    useEffect(() => {
+        fetch('https://obscure-journey-61930.herokuapp.com/rooftop')
+            .then(res => res.json())
+            .then(data => {
+                setRooftop(data)
+                setDisplayRooftop(data)
+            })
+    }, []);
 
-    
+
+
+
 
     const handleSearch = event => {
         const searchText = event.target.value;
-        const matchedRooftop = rooftop.filter( rooftop => rooftop.name.toLowerCase().includes(searchText.toLowerCase()));
+        const matchedRooftop = rooftop.filter(rooftop => rooftop.location.toLowerCase().includes(searchText.toLowerCase()));
         setDisplayRooftop(matchedRooftop);
     }
 
@@ -32,13 +38,13 @@ const FindRooftop = () => {
         <div>
             <div className="container find">
                 <div className="input-group mb-3">
-                    <input 
-                        placeholder="please ! type text to search..." 
-                        className="form-control" 
-                        type="text" 
+                    <input
+                        placeholder="please ! type location to search..."
+                        className="form-control"
+                        type="text"
                         onChange={handleSearch}
 
-                        />
+                    />
                 </div>
 
                 <div className="row">
@@ -46,14 +52,27 @@ const FindRooftop = () => {
                         displayRooftop.map(rooftop => (
                             <div key={rooftop._id} className="col-md-4 mb-3">
                                 <div className="card h-100">
+
                                     <div className="card-img">
-                                        <img className="img-fluid" src={rooftop.img} alt="" />
-                                    </div>
-                                    <div className="card-body">
-                                        <h5 className="card-title">{rooftop.name}</h5>
-                                        <p className="card-text">{rooftop.shortTitle}</p>
+                                        <img className="w-100" src={rooftop.image} alt="" />
                                     </div>
 
+                                    <div className="card-body mx-auto">
+
+                                        <h5 className="card-title"><FontAwesomeIcon icon={faMapMarkerAlt} /> {rooftop.location}</h5>
+                                        <div className="row">
+                                            <div className="col">
+                                                <h5 className="card-title"><FontAwesomeIcon icon={faBorderAll} /> {rooftop.squareFeet} sqft</h5>
+                                                <h5 className="card-title"><FontAwesomeIcon icon={faMoneyBill} /> {rooftop.price} Tk BDT</h5>
+                                            </div>
+                                            <div className="col">
+                                                <button className="btn btn-info mx-2 mt-2">Call</button>
+                                                <button className="btn btn-info mx-2 mt-2">Email</button>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
 
                                 </div>
                             </div>

@@ -1,20 +1,21 @@
-import React, { useRef } from 'react';
-import './AddRooftop.css';
+import React, { useRef } from 'react'
+import './AddRooftop.css'
+export default function AddRooftop() {
 
-const AddRooftop = () => {
     const squareRef = useRef()
     const locationRef = useRef()
-    const imgRef = useRef();
-    const mapRef = useRef();
-    const detailRef = useRef();
-    const moreDetailRef = useRef();
-    const phoneRef = useRef();
-    const emailRef = useRef();
-    const priceRef = useRef();
+    const imgRef = useRef()
+    const mapRef = useRef()
+    const detailRef = useRef()
+    const moreDetailRef = useRef()
+    const phoneRef = useRef()
+    const emailRef = useRef()
+    const priceRef = useRef()
+    const nameRef= useRef()
 
    
 
-    const handleAddProduct = (e) => {
+    const handleAddRooftop = (e) => {
         const squareFeet = squareRef.current.value;
         const location = locationRef.current.value;
         const image = imgRef.current.value;
@@ -24,14 +25,10 @@ const AddRooftop = () => {
         const phone = phoneRef.current.value;
         const email = emailRef.current.value;
         const price = priceRef.current.value;
-
-
-
-
-       
+        const name = nameRef.current.value;
        
 
-        const newRooftop = { squareFeet, location, image, googleMap, someDetail, moreDetail, phone, email, price };
+        const newRooftop = { name, squareFeet, location, image, googleMap, someDetail, moreDetail, phone, email, price };
 
         fetch('https://obscure-journey-61930.herokuapp.com/rooftop', {
             method: 'POST',
@@ -43,7 +40,7 @@ const AddRooftop = () => {
         .then(res => res.json())
         .then(data => {
             if(data.insertedId) {
-                alert('Successfully added Rooftop Farm')
+                alert('Successfully added product')
                 e.target.reset();
             }
         })
@@ -52,21 +49,28 @@ const AddRooftop = () => {
 
 
 
-
-
-
-
     return (
         <div className="add-rooftop container">
             <h1>Add a New Rooftop Farm</h1>
-            <form onSubmit={handleAddProduct} className="form-inline">
+
+
+            <form onSubmit={handleAddRooftop} className="form-inline">
                     <h1>Rooftop Details :</h1>
                 
+                    <label htmlFor="name">Name :</label>
+                    <input type="text" id="name" ref={nameRef} /> <br />
+
+
+
                     <label htmlFor="squareFeet">How many square feet? :</label>
                     <input type="number" id="squareFeet" ref={squareRef} /> <br />
 
                     <label htmlFor="location">Location :</label>
-                    <input type="text" id="squareFeet" ref={locationRef} /> <br />
+                    <input type="text" id="location" ref={locationRef} /> <br />
+
+                    <label htmlFor="img">Rooftop Image URL :</label>
+                    <input type="url" ref={imgRef} id="img" /> <br />
+
 
                     <label htmlFor="googleMap">Google map location URL :</label>
                     <input type="url" ref={mapRef} id="googleMap" /> <br />
@@ -84,14 +88,14 @@ const AddRooftop = () => {
 
                     
 
-                    <label htmlFor="email">E-mail :</label>
-                    <input type="email" ref={emailRef} id="email" /> <br />
+                    <label htmlFor="emailAddress">E-mail :</label>
+                    <input type="email" ref={emailRef} id="emailAddress" /> <br />
 
 
                     
                 
-                    <label htmlFor="price">Price thousand only:</label>
-                    <input type="number" ref={priceRef} id="price" /> <br />
+                    <label htmlFor="priceRoof">Price BDT :</label>
+                    <input type="number" ref={priceRef} id="priceRoof" /> <br />
                 
                 
                 
@@ -99,7 +103,5 @@ const AddRooftop = () => {
 
             </form>
         </div>
-    );
+    )
 }
-
-export default AddRooftop;

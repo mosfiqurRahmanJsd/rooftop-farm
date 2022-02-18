@@ -1,4 +1,4 @@
-import { Button, Nav, Navbar } from 'react-bootstrap';
+import { Button, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import Container from './../../../node_modules/react-bootstrap/esm/Container';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -13,26 +13,16 @@ import { UserContext } from '../../App';
 
 
 const Header = () => {
-    
-    const {value1} = useContext(UserContext);
+
+    const { value1 } = useContext(UserContext);
     const [loggedInUser] = value1;
 
-    const {value2} = useContext(UserContext);
+    const { value2 } = useContext(UserContext);
     const [cart] = value2;
-    
-
-    
 
 
 
 
-
-   
-    
-    
-
-    
-    
     return (
 
         // This is Header container
@@ -56,21 +46,24 @@ const Header = () => {
                             <Nav.Link href="/product" className="text-info">Product</Nav.Link>
                             <Nav.Link href="/blog" className="text-info">Blog</Nav.Link>
                             <Nav.Link href="/contact" className="text-info">Contact</Nav.Link>
-                            <Nav.Link href="/cart" className="text-info"> 
-                               <FontAwesomeIcon icon={faCartPlus} /> {cart.length}
+                            <Nav.Link href="/cart" className="text-info">
+                                <FontAwesomeIcon icon={faCartPlus} /> {cart.length}
                             </Nav.Link>
 
-                            
-                            {
-                               ! loggedInUser.name ? <Button variant="outline-info" href='/login'>Login</Button> :
-                               <Button variant="outline-info" href='/login'>Log Out</Button>
-                            }
-                            
 
-                            
+                            <NavDropdown title="Login" id="navbarScrollingDropdown">
+                                <NavDropdown.Item href="/login">Customer and User </NavDropdown.Item>
+                                <NavDropdown.Item href="/login">Entrepreneur</NavDropdown.Item>
+                                <NavDropdown.Divider />
+                                <NavDropdown.Item href="#action5">
+                                    Logout
+                                </NavDropdown.Item>
+                            </NavDropdown>
+
+
                         </Nav>
-                        
-                        
+
+
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

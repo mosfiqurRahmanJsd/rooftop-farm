@@ -20,6 +20,7 @@ import { getStoredCart } from "./utilities/fakedb";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Pay from "./components/Pay/Pay";
 import AddBlog from "./components/AddBlog/AddBlog";
+import BlogContainer from "./components/BlogContainer/BlogContainer";
 
 
 
@@ -76,7 +77,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog" element={<BlogContainer />} />
               <Route path="/product" element={<ProductContainer />} />
               <Route path="/rooftop/:id" element={<RooftopDetail />} />
               <Route path="/find/" element={<FindRooftop />} />

@@ -6,6 +6,7 @@ import { useRef } from 'react';
 const AddBlog = () => {
     const titleRef = useRef();
     const detailRef = useRef();
+    const shotDetailRef = useRef();
     const imgRef = useRef();
 
 
@@ -14,12 +15,13 @@ const AddBlog = () => {
         const title = titleRef.current.value;
         const detail = detailRef.current.value;
         const image = imgRef.current.value;
+        const shotDetail = shotDetailRef.current.value;
 
 
 
 
 
-        const newRooftop = { detail, title, image, };
+        const newRooftop = { detail, title, image, shotDetail};
 
         fetch('https://obscure-journey-61930.herokuapp.com/blog', {
             method: 'POST',
@@ -31,7 +33,7 @@ const AddBlog = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
-                    alert('Successfully added product')
+                    alert('Successfully added Blog')
                     e.target.reset();
                 }
             })
@@ -57,6 +59,10 @@ const AddBlog = () => {
 
                 <label htmlFor="location">Detail :</label>
                 <input type="text" id="location" ref={detailRef} /> <br />
+
+
+                <label htmlFor="short">Short Detail :</label>
+                <input type="text" id="short" ref={shotDetailRef} /> <br />
 
                 <label htmlFor="img">Blog Image URL :</label>
                 <input type="url" ref={imgRef} id="img" /> <br />

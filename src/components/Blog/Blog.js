@@ -5,20 +5,18 @@ import './Blog.css';
 
 
 
-const Blog = () => {
+const Blog = (props) => {
+    const {title, image, detail} = props.blog;
     return (
-        <div>
-            <div className="container blog">
-                
-
-                <div className="row my-3">
-                    
-                    
-                </div>
-
-
-
+        <div className="row">
+            <div className="col-md-4">
+                <img src={image} alt="" />
             </div>
+            <div className="col-md-8">
+                <h3>{title}</h3>
+                <p>{detail}</p>
+            </div>
+            
         </div>
     );
 }

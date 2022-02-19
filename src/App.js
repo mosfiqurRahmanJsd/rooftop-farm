@@ -11,12 +11,14 @@ import Signup from './components/Signup/Signup';
 import FindRooftop from './components/FindRooftop/FindRooftop';
 import RooftopDetail from './components/RooftopDetail/RooftopDetail';
 import Header from "./components/Header/Header";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes, BrowserRouter } from "react-router-dom";
 import Contact from './components/Contact/Contact';
 import { createContext, useEffect, useState } from "react";
 import AddProduct from "./components/AddProduct/AddProduct";
 import AddRooftop from "./components/AddRooftop/AddRooftop";
 import { getStoredCart } from "./utilities/fakedb";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Pay from "./components/Pay/Pay";
 
 
 
@@ -33,7 +35,7 @@ function App() {
   console.log(cart);
 
   const [loggedInUser, setLoggedInUser] = useState([]);
-  
+
 
 
   const [products, setProducts] = useState([]);
@@ -63,12 +65,6 @@ function App() {
 
 
 
-
-
-
-
-
-
   return (
 
     <div>
@@ -88,6 +84,11 @@ function App() {
               <Route path="/signup" element={<Signup />} />
               <Route path="/product/add" element={<AddProduct />} />
               <Route path="/rooftop/add" element={<AddRooftop />} />
+              <Route path="/cart" element={<Cart />} />
+              {/* <BrowserRouter>
+                <Route path="/" component={Cart} />
+                <PrivateRoute path="/private" component={Pay} />
+              </BrowserRouter> */}
             </Routes>
           </Router>
         </main>

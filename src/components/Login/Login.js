@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, } from 'react-router-dom';
+import { Link, useLocation, } from 'react-router-dom';
 import initializeAuthentication from '../../Firebase/firebase.initialize';
 import './Login.css';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
@@ -12,6 +12,8 @@ const provider = new GoogleAuthProvider();
 
 
 const Login = () => {
+    const location = useLocation();
+    console.log('came from', location.state?.from);
 
 
     const { value1 } = useContext(UserContext);

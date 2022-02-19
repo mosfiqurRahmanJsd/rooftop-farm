@@ -21,6 +21,7 @@ import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Pay from "./components/Pay/Pay";
 import AddBlog from "./components/AddBlog/AddBlog";
 import BlogContainer from "./components/BlogContainer/BlogContainer";
+import BlogDetails from "./components/BlogDetails/BlogDetails";
 
 
 
@@ -80,6 +81,7 @@ function App() {
               <Route path="/blog" element={<BlogContainer />} />
               <Route path="/product" element={<ProductContainer />} />
               <Route path="/rooftop/:id" element={<RooftopDetail />} />
+              <Route path="/blog/:id" element={<BlogDetails />} />
               <Route path="/find/" element={<FindRooftop />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/login" element={<Login />} />

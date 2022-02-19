@@ -8,6 +8,8 @@ const BlogDetails = () => {
 
     const [blog, setBlog] = useState([]);
 
+    const {title, image, shotDetail, detail} = blog;
+
     useEffect(() => {
         fetch(`https://obscure-journey-61930.herokuapp.com/blog/${id}`)
             .then(res => res.json())
@@ -15,12 +17,15 @@ const BlogDetails = () => {
     }, [id]);
 
 
-    
+    console.log(blog);
 
 
     return (
-        <div>
-            
+        <div className="container mt-5 pt-5">
+            <h1>{title}</h1>
+            <img className="img-fluid" src={image} alt="" />
+            <h6>{shotDetail}</h6>
+            <p>{detail}</p>
         </div>
     );
 }

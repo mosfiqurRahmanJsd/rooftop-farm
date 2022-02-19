@@ -19,6 +19,7 @@ import AddRooftop from "./components/AddRooftop/AddRooftop";
 import { getStoredCart } from "./utilities/fakedb";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Pay from "./components/Pay/Pay";
+import AddBlog from "./components/AddBlog/AddBlog";
 
 
 
@@ -84,6 +85,7 @@ function App() {
               <Route path="/signup" element={<Signup />} />
               <Route path="/product/add" element={<AddProduct />} />
               <Route path="/rooftop/add" element={<AddRooftop />} />
+              <Route path="/blog/add" element={<AddBlog />} />
               <Route path="/cart" element={<Cart />} />
               {/* <BrowserRouter>
                 <Route path="/" component={Cart} />

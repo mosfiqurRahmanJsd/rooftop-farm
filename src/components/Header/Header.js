@@ -17,6 +17,11 @@ const Header = () => {
     const { value1 } = useContext(UserContext);
     const [loggedInUser] = value1;
 
+    const { email, name } = loggedInUser;
+
+
+
+
     const { value2 } = useContext(UserContext);
     const [cart] = value2;
 
@@ -50,24 +55,38 @@ const Header = () => {
                                 <FontAwesomeIcon icon={faCartPlus} /> {cart.length}
                             </Nav.Link>
 
-                           
-                           
 
 
-                            <Dropdown>
-                                <Dropdown.Toggle variant="info" id="dropdown-basic">
-                                    Sign In
-                                </Dropdown.Toggle>
-
-                                <Dropdown.Menu>
-                                    <Dropdown.Item href="/login">User or Customer</Dropdown.Item>
-                                    <Dropdown.Item href="/login">Entrepreneur</Dropdown.Item>
-                                    <Dropdown.Item href="/login">Admin</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
 
 
-                            <Nav.Link href="/signup" className="text-info">Register</Nav.Link>
+                            {
+                                email ?
+                                <Nav.Link href="/login" className="text-info">Logout</Nav.Link>
+                                :
+                                    <Dropdown>
+                                        <Dropdown.Toggle variant="info" id="dropdown-basic">
+                                            Login
+                                        </Dropdown.Toggle>
+
+                                        <Dropdown.Menu>
+                                            <Dropdown.Item href="/login">User or Customer</Dropdown.Item>
+                                            <Dropdown.Item href="/login">Entrepreneur</Dropdown.Item>
+                                            <Dropdown.Item href="/login">Admin</Dropdown.Item>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
+                            }
+
+
+                            {
+                                email ?
+                                    <Nav.Link href="#" className="text-info">{email}</Nav.Link>
+                                    :
+                                    <Nav.Link href="/signup" className="text-info">Register</Nav.Link>
+                            }
+
+
+
+                            <Nav.Link href="/" className="text-info">{ }</Nav.Link>
 
                         </Nav>
 

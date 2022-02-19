@@ -33,6 +33,7 @@ function App() {
   console.log(cart);
 
   const [loggedInUser, setLoggedInUser] = useState([]);
+  
 
 
   const [products, setProducts] = useState([]);
@@ -71,7 +72,7 @@ function App() {
   return (
 
     <div>
-      <UserContext.Provider value={{ value1: [loggedInUser, setLoggedInUser], value2: [cart] }}>
+      <UserContext.Provider value={{ value1: [loggedInUser, setLoggedInUser], value2: [cart, setCart] }}>
         <main>
           <Header></Header>
           <Router>

@@ -1,15 +1,25 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { UserContext } from '../../App';
 
 
 
 
 const Signup = () => {
+
+
+    const { value1 } = useContext(UserContext);
+
+    const [loggedInUser, setLoggedInUser] = value1;
     
     const [displayName, setDisplayName] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
+
+    const [error, setError] = useState("");
+
+    const [success, setSuccess] = useState("");
 
 
     
@@ -36,14 +46,27 @@ const Signup = () => {
 
 
     const handleSubmit = (e) => {
-        console.log('Register');
+        e.preventDefault();
+        if (password.length < 6) {
+            setError('Password must be at least 6 characters long');
+            return;
+        }
         createUserWithEmailAndPassword(auth, email, password)
         .then(result => {
-            const user = result.user;
-            console.log(user);
+            const { displayName, email } = result.user;
+            const loggedInUser = {
+                name: displayName,
+                email: email
+            }
+            setLoggedInUser(loggedInUser);
+            
+            setSuccess('Account Creation Successfully');
+            setError('');
         })
-
-        e.preventDefault();
+        .catch(error => {
+            setError(error.message, error);
+        })
+        
     }
 
 
@@ -87,6 +110,10 @@ const Signup = () => {
                                     onBlur={handlePasswordChange}
                                     required
                                 />
+                            </div>
+                            <div className="row">
+                                <p className="text-danger">{error}</p>
+                                <p className="text-success">{success}</p>
                             </div>
 
                         

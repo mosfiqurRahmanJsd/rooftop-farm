@@ -33,7 +33,7 @@ const Cart = () => {
                     <p>Total : { cart.map(singleCart => console.log(singleCart.price)) }</p>
                     <p>Total Shipping : $5 </p>
                     <p>Sub Total : { }</p>
-                    <Button variant="outline-info" href='/login'>Log Out</Button>
+                    <Button variant="outline-info" href='/login'>Pay Now</Button>
                 </div>
             </div>
         </div>

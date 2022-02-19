@@ -1,8 +1,8 @@
-import React, {  } from 'react';
+import React, { useState } from 'react';
 import { Link, } from 'react-router-dom';
 import initializeAuthentication from '../../Firebase/firebase.initialize';
 import './Login.css';
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
 import { useContext } from 'react';
 import { UserContext } from '../../App';
 
@@ -13,24 +13,28 @@ const provider = new GoogleAuthProvider();
 
 const Login = () => {
 
-    
-    const {value1} = useContext(UserContext);
+
+    const { value1 } = useContext(UserContext);
 
     const [loggedInUser, setLoggedInUser] = value1;
 
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
 
+    const [error, setError] = useState("");
+    
 
     const handleGoogleSignIn = () => {
         const auth = getAuth();
         signInWithPopup(auth, provider)
             .then((result) => {
                 // This gives you a Google Access Token. You can use it to access the Google API.
-                
-                const {displayName, email, photoURL} = result.user;
+
+                const { displayName, email, photoURL } = result.user;
                 const loggedInUser = {
                     name: displayName,
-                    email : email,
-                    photo : photoURL
+                    email: email,
+                    photo: photoURL
                 }
                 setLoggedInUser(loggedInUser);
                 // ...
@@ -39,8 +43,41 @@ const Login = () => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 console.log(errorCode, errorMessage);
-               
+
             });
+    }
+
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+    }
+
+
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
+    }
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (password.length < 6) {
+            setError('Password must be at least 6 characters long');
+            return;
+        }
+        const auth = getAuth();
+        signInWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                const { displayName, email } = result.user;
+                const loggedInUser = {
+                    name: displayName,
+                    email: email
+                }
+                setLoggedInUser(loggedInUser);
+                setError('Login Successfully');
+            })
+            .catch(error => {
+                setError(error.message, error);
+            })
     }
 
 
@@ -49,16 +86,16 @@ const Login = () => {
             <div className="container">
                 <div className="card d-block mx-auto login">
                     <div className="card-body p-2 p-md-5">
-                        <h3 className="text-center">Login or Sign In</h3>
+                        <h3 className="text-center">Login with email and password</h3>
 
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <input
                                 className="form-control my-5 input"
                                 type="email"
                                 name="email"
                                 id=""
                                 placeholder="Email"
-
+                                onChange={handleEmailChange}
                                 required
                             />
                             <input
@@ -67,7 +104,7 @@ const Login = () => {
                                 name="password"
                                 id=""
                                 placeholder="Password"
-
+                                onChange={handlePasswordChange}
                                 required
                             />
 
@@ -85,6 +122,9 @@ const Login = () => {
                                     >
                                         Remember Me
                                     </label>
+                                </div>
+                                <div className="row">
+                                    <p className="text-success">{error}</p>
                                 </div>
                                 <Link className="link-color" to="/forgot_password">
                                     Forgot Password

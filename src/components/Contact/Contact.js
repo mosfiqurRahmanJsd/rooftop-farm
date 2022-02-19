@@ -6,7 +6,7 @@ const Contact = () => {
     return (
         <div>
             <div className="container contact-us">
-                <h4 className="mb-4 text-center"> <strong>Rooftop Farming For Green Cities:</strong> A Step Towards Urban Fresh Natural Food By Using Web Application.</h4>
+                <h4 className="mb-4 text-center"> An Web-based Application for Promoting Rooftop Farming and Consumption of Fresh Fruits Among Urban People</h4>
                 <div className="row">
                     
                     <div className="col-md-6 d-flex align-items-center justify-content-evenly">

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './FindRooftop.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt, faBorderAll, faMoneyBill } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const FindRooftop = () => {
 
@@ -51,6 +52,8 @@ const FindRooftop = () => {
                     {
                         displayRooftop.map(rooftop => (
                             <div key={rooftop._id} className="col-md-4 mb-3">
+                            <Link to={`/rooftop/${rooftop._id}`} className="text-decoration-none text-info">
+
                                 <div className="card h-100">
 
                                     <div className="card-img">
@@ -75,6 +78,7 @@ const FindRooftop = () => {
                                     </div>
 
                                 </div>
+                                </Link>
                             </div>
                         ))
                     }

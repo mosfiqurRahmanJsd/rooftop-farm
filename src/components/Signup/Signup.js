@@ -1,22 +1,50 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
 
 
 
 const Signup = () => {
-    const googleSignIn = () => {
+    
+    const [displayName, setDisplayName] = useState();
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
 
+
+    
+
+    const auth = getAuth();
+
+
+
+ 
+    const handleNameChange = (e) => {
+        setDisplayName(e.target.value);
+    }
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+    }
+
+   
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
     }
 
 
-    const handleBlur = () => {
 
+
+    const handleSubmit = (e) => {
+        console.log('Register');
+        createUserWithEmailAndPassword(auth, email, password)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+        })
+
+        e.preventDefault();
     }
-
-    const handleSubmit = () => {
-
-    }
-
 
 
     return (
@@ -33,7 +61,7 @@ const Signup = () => {
                                     name="name"
                                     id=""
                                     placeholder="Name"
-                                    onBlur={handleBlur}
+                                    onBlur={handleNameChange}
                                     required
                                 />
                             </div>
@@ -44,8 +72,8 @@ const Signup = () => {
                                     type="email"
                                     name="email"
                                     id=""
-                                    placeholder="Username or Email"
-                                    onBlur={handleBlur}
+                                    placeholder="Email"
+                                    onBlur={handleEmailChange}
                                     required
                                 />
                             </div>
@@ -56,21 +84,12 @@ const Signup = () => {
                                     name="password"
                                     id=""
                                     placeholder="Password"
-                                    onBlur={handleBlur}
+                                    onBlur={handlePasswordChange}
                                     required
                                 />
                             </div>
 
-                            <div className="from-group">
-                                <input
-                                    className="form-control my-4 input"
-                                    type="password"
-                                    name="confirm_password"
-                                    id=""
-                                    placeholder="Confirm Password"
-                                    required
-                                />
-                            </div>
+                        
 
                             <input
                                 className="w-100 login-btn my-3"
@@ -88,22 +107,7 @@ const Signup = () => {
                     </div>
                 </div>
             </div>
-            <div className="container container-sm-fluid ">
-                <div className="sign-in">
-                    <div className="separator my-3">Or</div>
-                    <button
-                        onClick={googleSignIn}
-                        className="google-btn btn border w-100 d-flex align-items-center"
-                    >
-                        <img
-                            className="img-fluid mt-2"
-                            src="https://i.ibb.co/R0cy8Yn/Group-571.png"
-                            alt=""
-                        />
-                        <h6 className="mx-auto">Continue with Google</h6>
-                    </button>
-                </div>
-            </div>
+            
         </div>
     );
 }

@@ -39,7 +39,7 @@ const RooftopDetail = () => {
                         <div ><p className="font-weight-bold"><FontAwesomeIcon icon={faMapMarkerAlt} /> {location}</p></div>
                         
                     </div>
-                    <iframe src={googleMap} width="620" height="450" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src={googleMap} width="320" height="200" allowfullscreen="" loading="lazy"></iframe>
                 </div>
                 <div className="col-md-6">
                     <h2>{squareFeet} sqft {name} {location} </h2>

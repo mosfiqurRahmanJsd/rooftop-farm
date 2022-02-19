@@ -1,4 +1,4 @@
-import { Button, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Dropdown, Nav, Navbar, NavDropdown, Button } from 'react-bootstrap';
 import Container from './../../../node_modules/react-bootstrap/esm/Container';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -50,16 +50,24 @@ const Header = () => {
                                 <FontAwesomeIcon icon={faCartPlus} /> {cart.length}
                             </Nav.Link>
 
+                           
+                           
 
-                            <NavDropdown title="Login" id="navbarScrollingDropdown">
-                                <NavDropdown.Item href="/login">Customer and User </NavDropdown.Item>
-                                <NavDropdown.Item href="/login">Entrepreneur</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action5">
-                                    Logout
-                                </NavDropdown.Item>
-                            </NavDropdown>
 
+                            <Dropdown>
+                                <Dropdown.Toggle variant="info" id="dropdown-basic">
+                                    Sign In
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="/login">User or Customer</Dropdown.Item>
+                                    <Dropdown.Item href="/login">Entrepreneur</Dropdown.Item>
+                                    <Dropdown.Item href="/login">Admin</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
+
+
+                            <Nav.Link href="/signup" className="text-info">Register</Nav.Link>
 
                         </Nav>
 

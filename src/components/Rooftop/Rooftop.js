@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {  } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt, faBorderAll, faMoneyBill } from '@fortawesome/free-solid-svg-icons';
@@ -11,7 +11,7 @@ import { faMapMarkerAlt, faBorderAll, faMoneyBill } from '@fortawesome/free-soli
 
 const Rooftop = (props) => {
 
-    const { _id, squareFeet, location, image, phone, email, price } = props.roof;
+    const { _id, squareFeet, location, image,  price } = props.roof;
 
 
 

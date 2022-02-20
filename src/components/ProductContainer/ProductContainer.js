@@ -37,7 +37,7 @@ const ProductContainer = () => {
 
     return (
         <div className="container my-5">
-            <h2 className="pt-5 text-center">Latest Products</h2>
+            <h2 className="pt-5 text-center text-info">Latest Products</h2>
 
             <div className="row row-cols-1 row-cols-md-3 g-4 my-3">
                 {

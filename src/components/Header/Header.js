@@ -33,11 +33,10 @@ const Header = () => {
         // This is Header container
         <header>
             {/* Fixed Navbar */}
-            <Navbar variant="" expand="md" fixed="top" className="bg-color bg-light">
+            <Navbar variant="" expand="md" fixed="top" className="bg-color bg-dark">
                 <Container>
                     <Navbar.Brand href="/" className="header">
-                        <img className="img-fluid" src="https://i.ibb.co/LQQ2swW/rooftop-farm-logo.png" alt="" />
-
+                       <h1 className="text-info">Rooftop Farm</h1>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">

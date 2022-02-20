@@ -8,6 +8,8 @@ const AddBlog = () => {
     const detailRef = useRef();
     const shotDetailRef = useRef();
     const imgRef = useRef();
+    const moreImgRef = useRef();
+    const moreDetailRef = useRef();
 
 
 
@@ -16,12 +18,14 @@ const AddBlog = () => {
         const detail = detailRef.current.value;
         const image = imgRef.current.value;
         const shotDetail = shotDetailRef.current.value;
+        const moreImg = moreImgRef.current.value;
+        const moreDetail = moreDetailRef.current.value;
 
 
 
 
 
-        const newRooftop = { detail, title, image, shotDetail};
+        const newRooftop = { detail, title, image, shotDetail, moreImg, moreDetail};
 
         fetch('https://obscure-journey-61930.herokuapp.com/blog', {
             method: 'POST',
@@ -66,6 +70,14 @@ const AddBlog = () => {
 
                 <label htmlFor="img">Blog Image URL :</label>
                 <input type="url" ref={imgRef} id="img" /> <br />
+
+                <label htmlFor="moreImg">More Blog Image URL :</label>
+                <input type="url" ref={moreImgRef} id="moreImg" /> <br />
+
+
+                
+                <label htmlFor="moreDetail">More Detail :</label>
+                <input type="text" id="moreDetail" ref={moreDetailRef} /> <br />
 
 
 

@@ -6,7 +6,7 @@ const Contact = () => {
     return (
         <div>
             <div className="container contact-us">
-                <h4 className="mb-4 text-center"> An Web-based Application for Promoting Rooftop Farming and Consumption of Fresh Fruits Among Urban People</h4>
+                <h4 className="mb-4 text-center text-light bg-info py-3 rounded"> An Web-based Application for Promoting Rooftop Farming and Consumption of Fresh Fruits Among Urban People</h4>
                 <div className="row">
                     
                     <div className="col-md-6 d-flex align-items-center justify-content-evenly">
@@ -16,7 +16,7 @@ const Contact = () => {
                             sx={{ width: 260, height: 260 }}
                         />
                         <div className="mt-2 ps-2">
-                            <h5>Supervised By</h5>
+                            <h5 className="text-info text-uppercase text-decoration-underline">Supervised By</h5>
                             <h4 className="fst-italic">Dr. S. M. Aminul Haque</h4>
                             <h6 className="fw-bolder">Associate Professor and Associate Head</h6>
                             <p className="m-0">Department of CSE</p>
@@ -31,7 +31,7 @@ const Contact = () => {
                             sx={{ width: 260, height: 260 }}
                         />
                         <div className="mt-2 ps-4">
-                            <h5>Co-Supervised By</h5>
+                            <h5 className="text-info text-uppercase text-decoration-underline">Co-Supervised By</h5>
                             <h4 className="fst-italic">Mr. Mohammad Jahangir Alam</h4>
                             <h6 className="fw-bolder">Senior Lecturer</h6>
                             
@@ -47,7 +47,7 @@ const Contact = () => {
 
 
             <div className="container mt-5">
-                <h3 className="text-center"> <strong>Submitted By :</strong> </h3>
+                <h5 className="text-center text-info text-uppercase text-decoration-underline"> Submitted By </h5>
                 <div className="row">
                     
                     <div className="col-md-6 d-flex align-items-center justify-content-evenly">

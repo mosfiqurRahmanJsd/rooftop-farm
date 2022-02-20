@@ -8,7 +8,7 @@ import { faTwitter, faFacebook, faInstagramSquare } from '@fortawesome/free-bran
 
 const Footer = () => {
     return (
-        <footer className="bg-light pt-5">
+        <footer className="bg-dark text-info pt-5">
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-sm-6 col-md-5">
@@ -19,27 +19,27 @@ const Footer = () => {
                     <div className="col-12 col-sm-6 col-md-2">
                         
                         <ul className="list-unstyled">
-                            <li><a className="text-decoration-none text-muted" href="#0">Rooftop Farming Solutions</a></li>
-                            <li><a className="text-decoration-none text-muted" href="#0">Our Projects</a></li>
-                            <li><a className="text-decoration-none text-muted" href="#0">Upcoming Events & Workshops</a></li>
-                            <li><a className="text-decoration-none text-muted" href="#0">Online Store FAQ</a></li>
-                            <li><a className="text-decoration-none text-muted" href="#0">Privacy Policy</a></li>
-                            <li><a className="text-decoration-none text-muted" href="#0">Terms and Conditions</a></li>
+                            <li><a className="text-decoration-none text-info" href="#0">Rooftop Farming Solutions</a></li>
+                            <li><a className="text-decoration-none text-info" href="#0">Our Projects</a></li>
+                            <li><a className="text-decoration-none text-info" href="#0">Upcoming Events & Workshops</a></li>
+                            <li><a className="text-decoration-none text-info" href="#0">Online Store FAQ</a></li>
+                            <li><a className="text-decoration-none text-info" href="#0">Privacy Policy</a></li>
+                            <li><a className="text-decoration-none text-info" href="#0">Terms and Conditions</a></li>
                         </ul>
                     </div>
                     <div className="col-12 col-sm-6 col-md-2">
                         
                         <ul className="list-unstyled">
-                            <li><a className="text-decoration-none text-muted" href="#0">Our Story</a></li>
-                            <li><a className="text-decoration-none text-muted" href="#0">Request an consultation</a></li>
-                            <li><a className="text-decoration-none text-muted" href="#0">Create your home garden</a></li>
-                            <li><a className="text-decoration-none text-muted" href="#0">Instruction of using FPS and PayMe</a></li>
-                            <li><a className="text-decoration-none text-muted" href="#0">Engineering</a></li>
+                            <li><a className="text-decoration-none text-info" href="#0">Our Story</a></li>
+                            <li><a className="text-decoration-none text-info" href="#0">Request an consultation</a></li>
+                            <li><a className="text-decoration-none text-info" href="#0">Create your home garden</a></li>
+                            <li><a className="text-decoration-none text-info" href="#0">Instruction of using FPS and PayMe</a></li>
+                            <li><a className="text-decoration-none text-info" href="#0">Engineering</a></li>
                         </ul>
                     </div>
                     <div className="col-12 col-sm-6 col-md-2">
                         
-                        <img className="img-fluid" src="https://i.ibb.co/LQQ2swW/rooftop-farm-logo.png" alt="" />
+                        <h1 className="text-info">Rooftop F</h1>
                         
                         <ul className="list-unstyled mt-4 d-flex justify-content-around social-icon">
                             <li><a className="text-decoration-none" href="#0"><FontAwesomeIcon icon={faFacebook} /></a></li>

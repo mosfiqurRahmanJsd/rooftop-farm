@@ -42,12 +42,12 @@ const RooftopDetail = () => {
                     <iframe src={googleMap} width="320" height="200" allowfullscreen="" loading="lazy"></iframe>
                 </div>
                 <div className="col-md-6">
-                    <h2>{squareFeet} sqft {name} {location} </h2>
-                    <p style={{ textAlign: 'justify' }}>{someDetail}</p> <br />
-                    <p style={{ textAlign: 'justify' }}>{moreDetail}</p>
-                    <h5>Contact Information</h5>
-                    <p>Phone :{phone}</p>
-                    <p>Email :{email}</p>
+                    <h2 className="text-dark">{squareFeet} sqft {name} {location} </h2>
+                    <p className="text-info" style={{ textAlign: 'justify' }}>{someDetail}</p> <br />
+                    <p className="text-info"  style={{ textAlign: 'justify' }}>{moreDetail}</p>
+                    <h5 className="text-success">Contact Information</h5>
+                    <p  className="text-success">Phone :{phone}</p>
+                    <p  className="text-success">Email :{email}</p>
                 </div>
             </div>
         </div>

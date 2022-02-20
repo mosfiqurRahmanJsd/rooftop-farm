@@ -2,6 +2,7 @@ import React, {  } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt, faBorderAll, faMoneyBill } from '@fortawesome/free-solid-svg-icons';
+import './Rooftop.css';
 
 
 
@@ -19,9 +20,9 @@ const Rooftop = (props) => {
 
     return (
 
-        <div className="col">
+        <div className="col ">
             <Link to={`/rooftop/${_id}`} className="text-decoration-none text-info">
-                <div className="card h-100">
+                <div className="card h-100 bg-dark border-radius">
 
                     <div className="card-img">
                         <img className="w-100" src={image} alt="" />

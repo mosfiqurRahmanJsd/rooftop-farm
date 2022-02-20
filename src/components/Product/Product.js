@@ -3,41 +3,37 @@ import { Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import './Product.css'
-import { Rating } from '@mui/material';
+
 
 
 
 const Product = (props) => {
 
 
-    const { name, img, price, star } = props.product;
+    const { name, img, price } = props.product;
 
 
-    const rating = parseFloat(star);
     
 
 
     return (
 
         <div className="col">
-            <div className="card h-100">
+            <div className="card h-100 bg-dark shadow border-0">
                 <div className="card-img">
-                    <img className="img-fluid" src={img} alt="" />
+                    <img className="img-fluid " width="500" src={img} alt="" />
                 </div>
-                <div className="card-body">
-                    <h5 className="card-title">{name}</h5>
+                <div className="card-body pb-0">
+                    <h4 className="card-title text-info m-0">{name}</h4>
 
                 </div>
 
 
-                <div className="card-footer bg-white border-0 mb-2 d-flex d-flex justify-content-between aligns-items-center">
+                <div className="card-footer mb-2 bg-dark border-0 d-flex d-flex justify-content-between aligns-items-center">
 
-                    <h3 className="align-items-center">$ {price}</h3>
+                    <h3 className="align-items-center bg-dark text-info m-0">BDT {price} Tk.</h3>
 
                    
-                    <Rating  value={rating} />
-
-
                     <Button
                         variant="outline-info"
                         href='#'

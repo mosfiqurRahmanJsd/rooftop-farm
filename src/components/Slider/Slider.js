@@ -4,9 +4,9 @@ import './Slider.css'
 
 const Slider = () => {
     return (
-        <div className="container slider rounded">
+        <div className="container slider rounded text-dark">
 
-            <Carousel variant="dark" className="background d-flex align-items-center text-align-center">
+            <Carousel variant="info" className="background d-flex align-items-center text-align-center">
                 <Carousel.Item>
                     <div className="row d-flex align-items-center slide-content">
                         <div className="col-md-6 ps-5">

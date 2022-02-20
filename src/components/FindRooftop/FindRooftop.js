@@ -54,13 +54,13 @@ const FindRooftop = () => {
                             <div key={rooftop._id} className="col-md-4 mb-3">
                             <Link to={`/rooftop/${rooftop._id}`} className="text-decoration-none text-info">
 
-                                <div className="card h-100">
+                                <div className="card h-100 bg-info text-dark">
 
                                     <div className="card-img">
                                         <img className="w-100" src={rooftop.image} alt="" />
                                     </div>
 
-                                    <div className="card-body mx-auto">
+                                    <div className="card-body mx-auto text-light">
 
                                         <h5 className="card-title"><FontAwesomeIcon icon={faMapMarkerAlt} /> {rooftop.location}</h5>
                                         <div className="row">
@@ -69,8 +69,8 @@ const FindRooftop = () => {
                                                 <h5 className="card-title"><FontAwesomeIcon icon={faMoneyBill} /> {rooftop.price} Tk BDT</h5>
                                             </div>
                                             <div className="col">
-                                                <button className="btn btn-info mx-2 mt-2">Call</button>
-                                                <button className="btn btn-info mx-2 mt-2">Email</button>
+                                                <button className="btn btn-dark mx-2 mt-2">Call</button>
+                                                <button className="btn btn-dark mx-2 mt-2">Email</button>
 
                                             </div>
                                         </div>

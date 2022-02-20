@@ -17,7 +17,7 @@ const RooftopContainer = () => {
 
     return (
         <div className="container my-5">
-            <h2 className="py-3 text-center">Latest Rooftops</h2>
+            <h2 className="py-3 text-center text-info">Latest Rooftops</h2>
             <div className="row row-cols-1 row-cols-md-3 g-4 my-3">
                 {
                     rooftop.map(roof => <Rooftop roof={roof} key={roof._id}></Rooftop>)

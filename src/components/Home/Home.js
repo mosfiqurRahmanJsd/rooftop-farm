@@ -5,6 +5,7 @@ import ReviewContainer from '../ReviewContainer/ReviewContainer';
 import RooftopContainer from './../RooftopContainer/RooftopContainer';
 import Slider from './../Slider/Slider';
 import ProductContainer from './../ProductContainer/ProductContainer';
+import HomeProductContainer from '../HomeProductContainer/HomeProductContainer';
 
 
 
@@ -20,7 +21,7 @@ const Home = () => {
         <>
             <Slider></Slider>
             <RooftopContainer></RooftopContainer>
-            <ProductContainer></ProductContainer>
+            <HomeProductContainer></HomeProductContainer>
             <ReviewContainer></ReviewContainer>
             <Footer></Footer>
 

@@ -33,10 +33,10 @@ const Header = () => {
         // This is Header container
         <header>
             {/* Fixed Navbar */}
-            <Navbar variant="" expand="md" fixed="top" className="bg-color bg-dark">
+            <Navbar variant="" expand="md" fixed="top" className="bg-color">
                 <Container>
                     <Navbar.Brand href="/" className="header">
-                       <h1 className="text-info">Rooftop Farm</h1>
+                       <img src="https://i.ibb.co/JpN3VhM/asdf.png" alt="" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
@@ -45,12 +45,12 @@ const Header = () => {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Nav.Link href="/" className="text-info">Home</Nav.Link>
-                            <Nav.Link href="/find" className="text-info">Find Rooftop</Nav.Link>
-                            <Nav.Link href="/product" className="text-info">Product</Nav.Link>
-                            <Nav.Link href="/blog" className="text-info">Blog</Nav.Link>
-                            <Nav.Link href="/contact" className="text-info">Contact</Nav.Link>
-                            <Nav.Link href="/cart" className="text-info">
+                            <Nav.Link href="/" className="text-dark">Home</Nav.Link>
+                            <Nav.Link href="/find" className="text-dark">Find Rooftop</Nav.Link>
+                            <Nav.Link href="/product" className="text-dark">Product</Nav.Link>
+                            <Nav.Link href="/blog" className="text-dark">Blog</Nav.Link>
+                            <Nav.Link href="/contact" className="text-dark">Contact</Nav.Link>
+                            <Nav.Link href="/cart" className="text-dark">
                                 <FontAwesomeIcon icon={faCartPlus} /> {cart.length}
                             </Nav.Link>
 
@@ -60,10 +60,10 @@ const Header = () => {
 
                             {
                                 email ?
-                                <Nav.Link href="/login" className="text-info">Logout</Nav.Link>
+                                <Nav.Link href="/login" className="text-dark">Logout</Nav.Link>
                                 :
                                     <Dropdown>
-                                        <Dropdown.Toggle variant="info" id="dropdown-basic">
+                                        <Dropdown.Toggle variant="dark" id="dropdown-basic">
                                             Login
                                         </Dropdown.Toggle>
 
@@ -78,14 +78,14 @@ const Header = () => {
 
                             {
                                 email ?
-                                    <Nav.Link href="#" className="text-info">{email}</Nav.Link>
+                                    <Nav.Link href="#" className="text-dark">{email}</Nav.Link>
                                     :
-                                    <Nav.Link href="/signup" className="text-info">Register</Nav.Link>
+                                    <Nav.Link href="/signup" className="text-dark">Register</Nav.Link>
                             }
 
 
 
-                            <Nav.Link href="/" className="text-info">{ }</Nav.Link>
+                            <Nav.Link href="/" className="text-dark">{ }</Nav.Link>
 
                         </Nav>
 

@@ -1,9 +1,5 @@
 import Home from "./components/Home/Home";
 
-
-
-
-import Blog from './components/Blog/Blog';
 import ProductContainer from './components/ProductContainer/ProductContainer';
 import Cart from './components/Cart/Cart';
 import Login from './components/Login/Login';
@@ -11,14 +7,12 @@ import Signup from './components/Signup/Signup';
 import FindRooftop from './components/FindRooftop/FindRooftop';
 import RooftopDetail from './components/RooftopDetail/RooftopDetail';
 import Header from "./components/Header/Header";
-import { Route, BrowserRouter as Router, Routes, BrowserRouter } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Contact from './components/Contact/Contact';
 import { createContext, useEffect, useState } from "react";
 import AddProduct from "./components/AddProduct/AddProduct";
 import AddRooftop from "./components/AddRooftop/AddRooftop";
 import { getStoredCart } from "./utilities/fakedb";
-import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
-import Pay from "./components/Pay/Pay";
 import AddBlog from "./components/AddBlog/AddBlog";
 import BlogContainer from "./components/BlogContainer/BlogContainer";
 import BlogDetails from "./components/BlogDetails/BlogDetails";
@@ -35,7 +29,7 @@ function App() {
 
 
   const [cart, setCart] = useState([]);
-  console.log(cart);
+  
 
   const [loggedInUser, setLoggedInUser] = useState([]);
 

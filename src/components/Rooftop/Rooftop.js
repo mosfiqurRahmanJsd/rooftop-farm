@@ -21,8 +21,8 @@ const Rooftop = (props) => {
     return (
 
         <div className="col ">
-            <Link to={`/rooftop/${_id}`} className="text-decoration-none text-info">
-                <div className="card h-100 bg-dark border-radius">
+            <Link to={`/rooftop/${_id}`} className="text-decoration-none text-dark">
+                <div className="card h-100 bg-color border-radius">
 
                     <div className="card-img">
                         <img className="w-100" src={image} alt="" />

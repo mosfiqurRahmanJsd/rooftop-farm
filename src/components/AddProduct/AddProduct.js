@@ -36,7 +36,6 @@ export default function AddProduct() {
     }
 
 
-
     return (
         <div className="add-product container">
             <h1>Added A New Product</h1>

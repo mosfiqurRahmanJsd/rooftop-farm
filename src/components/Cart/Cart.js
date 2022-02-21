@@ -1,4 +1,4 @@
-import React, { } from 'react';
+import React, { useEffect, useState} from 'react';
 import useCart from '../../hooks/useCart';
 import CartItem from '../CartItem/CartItem';
 
@@ -7,13 +7,32 @@ import { Button } from 'react-bootstrap';
 import useProducts from '../../hooks/useProducts';
 
 
+
 const Cart = () => {
 
     const [products] = useProducts();
     const [cart] = useCart(products);
-    
+    const [total, setTotal] = useState(0)
 
     
+    
+    useEffect(() => {
+        sum()
+    }, [])
+
+
+    const sum = () => {
+        var total1 = 0;
+        console.log("total")
+        cart.map(value => {
+            console.log(value.price)
+            console.log(value.quantity)
+            total1 += value.price * value.quantity;
+        })
+        setTotal(total1)
+  }
+
+  
     
 
 
@@ -30,7 +49,7 @@ const Cart = () => {
 
                     <h2>Order Summary</h2>
                     <h3>Items Ordered { cart.length }</h3>
-                    <p>Total : { cart.map(singleCart => console.log(singleCart.price)) }</p>
+                    <p>Total : { total }</p>
                     <p>Total Shipping : $5 </p>
                     <p>Sub Total : { }</p>
                     <Button variant="outline-info" href='/login'>Pay Now</Button>

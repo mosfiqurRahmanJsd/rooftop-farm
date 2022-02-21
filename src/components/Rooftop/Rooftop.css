@@ -10,3 +10,7 @@
     border-radius: 10px;
     transform: scale(1.05);
 }
+
+.bg-color {
+    background-color: #FFF8EC;
+}

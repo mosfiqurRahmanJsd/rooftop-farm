@@ -13,6 +13,7 @@ function PrivateRoute({ children, ...rest }) {
     const [loggedInUser] = value1;
 
     const { email } = loggedInUser;
+    
 
 
     return (

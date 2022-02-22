@@ -1,8 +1,15 @@
 .header img {
-    width: 200px;
-    height: 50px;
+  height: 50px;
 }
 
-.bg-color {
-    background-color: #FDECE4;
+.dropdown-menu a.active {
+  background: none;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background: none !important;
 }

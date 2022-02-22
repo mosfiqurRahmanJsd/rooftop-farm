@@ -1,10 +1,12 @@
-import { Dropdown, Nav, Navbar, NavDropdown, Button } from 'react-bootstrap';
+import { Dropdown, Nav, Navbar, NavDropdown, } from 'react-bootstrap';
 import Container from './../../../node_modules/react-bootstrap/esm/Container';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import { useContext } from 'react';
 import { UserContext } from '../../App';
+import { NavLink } from 'react-router-dom';
+import { Avatar } from '@mui/material';
 
 
 
@@ -17,7 +19,7 @@ const Header = () => {
     const { value1 } = useContext(UserContext);
     const [loggedInUser] = value1;
 
-    const { email, name } = loggedInUser;
+    const { email, name, photo } = loggedInUser;
 
 
 
@@ -32,60 +34,59 @@ const Header = () => {
 
         // This is Header container
         <header>
+
+
+
             {/* Fixed Navbar */}
             <Navbar variant="" expand="md" fixed="top" className="bg-color">
                 <Container>
-                    <Navbar.Brand href="/" className="header">
-                       <img src="https://i.ibb.co/JpN3VhM/asdf.png" alt="" />
-                    </Navbar.Brand>
+                    <NavLink to="/" className="header navbar-brand">
+                        <img src="https://i.ibb.co/JpN3VhM/asdf.png" alt="" />
+                    </NavLink>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
-                        <Nav
-                            className="ms-auto my-2 my-lg-0"
-                            style={{ maxHeight: '100px' }}
-                            navbarScroll
+                        <Nav className="ms-auto d-flex align-items-center"
                         >
-                            <Nav.Link href="/" className="text-dark">Home</Nav.Link>
-                            <Nav.Link href="/find" className="text-dark">Find Rooftop</Nav.Link>
-                            <Nav.Link href="/product" className="text-dark">Product</Nav.Link>
-                            <Nav.Link href="/blog" className="text-dark">Blog</Nav.Link>
-                            <Nav.Link href="/contact" className="text-dark">Contact</Nav.Link>
-                            <Nav.Link href="/cart" className="text-dark">
+                            <NavLink to="/" className="text-dark nav-link">Home</NavLink>
+                            <NavLink to="/find" className="text-dark  nav-link">Find Rooftop</NavLink>
+                            <NavLink to="/product" className="text-dark  nav-link">Product</NavLink>
+                            <NavLink to="/blog" className="text-dark  nav-link">Blog</NavLink>
+                            <NavLink to="/contact" className="text-dark  nav-link">Contact</NavLink>
+                            <NavLink to="/cart" className="text-dark  nav-link">
                                 <FontAwesomeIcon icon={faCartPlus} /> {cart.length}
-                            </Nav.Link>
+                            </NavLink>
+
+
+                            <Dropdown>
+                                <Dropdown.Toggle variant="none" id="dropdown-scroll">
+                                    <Avatar alt="Remy Sharp" src={photo} />
+                                </Dropdown.Toggle>
+
+                                {
+                                    email ? (<Dropdown.Menu>
+                                        <NavDropdown.Item href="#action/3.2">{name}</NavDropdown.Item>
+                                        <NavDropdown.Item href="#action/3.3">Dashboard</NavDropdown.Item>
+                                        <NavDropdown.Divider />
+                                        <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item>
+
+                                    </Dropdown.Menu>)
+                                        :
+                                        (
+                                            <Dropdown.Menu>
+                                                <NavLink className="dropdown-item text-dark" to="/login">User or Customer</NavLink>
+                                                <NavLink className="dropdown-item text-dark" to="/login">Entrepreneur</NavLink>
+                                                <NavLink className="dropdown-item text-dark" to="/login">Admin</NavLink>
+                                            </Dropdown.Menu>
+                                        )
+
+                                }
 
 
 
 
-
-                            {
-                                email ?
-                                <Nav.Link href="/login" className="text-dark">Logout</Nav.Link>
-                                :
-                                    <Dropdown>
-                                        <Dropdown.Toggle variant="dark" id="dropdown-basic">
-                                            Login
-                                        </Dropdown.Toggle>
-
-                                        <Dropdown.Menu>
-                                            <Dropdown.Item href="/login">User or Customer</Dropdown.Item>
-                                            <Dropdown.Item href="/login">Entrepreneur</Dropdown.Item>
-                                            <Dropdown.Item href="/login">Admin</Dropdown.Item>
-                                        </Dropdown.Menu>
-                                    </Dropdown>
-                            }
+                            </Dropdown>
 
 
-                            {
-                                email ?
-                                    <Nav.Link href="#" className="text-dark">{email}</Nav.Link>
-                                    :
-                                    <Nav.Link href="/signup" className="text-dark">Register</Nav.Link>
-                            }
-
-
-
-                            <Nav.Link href="/" className="text-dark">{ }</Nav.Link>
 
                         </Nav>
 
@@ -93,6 +94,9 @@ const Header = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+
+
+
 
 
         </header>

@@ -7,7 +7,7 @@ import Signup from './components/Signup/Signup';
 import FindRooftop from './components/FindRooftop/FindRooftop';
 import RooftopDetail from './components/RooftopDetail/RooftopDetail';
 import Header from "./components/Header/Header";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Contact from './components/Contact/Contact';
 import { createContext, useEffect, useState } from "react";
 import AddProduct from "./components/AddProduct/AddProduct";
@@ -64,13 +64,11 @@ function App() {
 
   return (
 
-    <div>
       <UserContext.Provider value={{ value1: [loggedInUser, setLoggedInUser], value2: [cart, setCart] }}>
         <main>
           <Header></Header>
-          <Router>
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/*" element={<Home />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<BlogContainer />} />
               <Route path="/product" element={<ProductContainer />} />
@@ -89,10 +87,8 @@ function App() {
                 <PrivateRoute path="/private" component={Pay} />
               </BrowserRouter> */}
             </Routes>
-          </Router>
         </main>
       </UserContext.Provider>
-    </div>
   );
 }
 

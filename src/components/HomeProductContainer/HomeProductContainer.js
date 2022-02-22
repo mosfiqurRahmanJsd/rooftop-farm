@@ -10,7 +10,7 @@ const HomeProductContainer = () => {
     const [products] = useProducts();
 
     const onlySixProducts = products.slice(1, 7);
-    console.log(onlySixProducts);
+    // console.log(onlySixProducts);
 
 
 

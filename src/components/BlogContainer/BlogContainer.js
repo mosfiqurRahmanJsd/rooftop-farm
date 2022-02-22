@@ -5,7 +5,7 @@ import './BlogContainer.css';
 
 const BlogContainer = () => {
     const [blogs, setBlogs] = useState([]);
-    console.log(blogs);
+    // console.log(blogs);
     useEffect(() => {
        fetch('https://obscure-journey-61930.herokuapp.com/blog')
        .then(res => res.json())

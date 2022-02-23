@@ -19,6 +19,7 @@ import BlogDetails from "./components/BlogDetails/BlogDetails";
 import Shipment from "./components/Shipment/Shipment";
 import Dashboard from "./components/Dashboard/Dashboard";
 import PrivateOutlet from "./components/PrivateOutlet/PrivateOutlet";
+import EntrepreneurDashboard from "./components/EntrepreneurDashboard/EntrepreneurDashboard";
 
 
 
@@ -90,6 +91,7 @@ function App() {
               <Route path="/*" element={<PrivateOutlet />}>
                   <Route path="dashboard" element={<Dashboard />} />
                   <Route path="shipment" element={<Shipment />} />
+                  <Route path="entrepreneur" element={<EntrepreneurDashboard />} />
               </Route>
               </Routes>
         </main>

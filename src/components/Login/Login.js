@@ -13,6 +13,7 @@ const provider = new GoogleAuthProvider();
 
 const Login = () => {
     
+    
     const { value1 } = useContext(UserContext);
 
     const [loggedInUser, setLoggedInUser] = value1;
@@ -40,6 +41,11 @@ const Login = () => {
                 }
                 
                 setLoggedInUser(loggedInUser);
+                if(location.state?.from) {
+                    navigate(location.state.from);
+                }
+                
+                
 
 
                 // ...
@@ -61,6 +67,7 @@ const Login = () => {
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
     }
+
 
 
     const handleSubmit = (e) => {

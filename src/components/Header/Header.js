@@ -64,18 +64,19 @@ const Header = () => {
 
                                 {
                                     email ? (<Dropdown.Menu>
-                                        <NavDropdown.Item href="#action/3.2">{name}</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action/3.3">Dashboard</NavDropdown.Item>
+                                        <NavDropdown.Item>{name}</NavDropdown.Item>
+                                        <NavLink className="dropdown-item text-dark" to="/dashboard">Dashboard</NavLink>
+                                        <NavLink className="dropdown-item text-dark" to="/entrepreneur">Entrepreneur</NavLink>
                                         <NavDropdown.Divider />
-                                        <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item>
+                                        <NavDropdown.Item href="/">Logout</NavDropdown.Item>
 
                                     </Dropdown.Menu>)
                                         :
                                         (
                                             <Dropdown.Menu>
                                                 <NavLink className="dropdown-item text-dark" to="/login">User or Customer</NavLink>
-                                                <NavLink className="dropdown-item text-dark" to="/login">Entrepreneur</NavLink>
-                                                <NavLink className="dropdown-item text-dark" to="/login">Admin</NavLink>
+                                                <NavLink className="dropdown-item text-dark" to="/entrepreneur">Entrepreneur Dashboard</NavLink>
+                                                <NavLink className="dropdown-item text-dark" to="/dashboard">Admin Dashboard</NavLink>
                                             </Dropdown.Menu>
                                         )
 

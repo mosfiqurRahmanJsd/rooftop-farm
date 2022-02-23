@@ -1,10 +1,12 @@
-import React, { useEffect, useState} from 'react';
+import React, {  } from 'react';
 import useCart from '../../hooks/useCart';
 import CartItem from '../CartItem/CartItem';
 
 import './Cart.css';
 import { Button } from 'react-bootstrap';
 import useProducts from '../../hooks/useProducts';
+import { useNavigate } from 'react-router-dom';
+
 
 
 
@@ -12,13 +14,11 @@ const Cart = () => {
 
     const [products] = useProducts();
     const [cart] = useCart(products);
-//     const [total, setTotal] = useState(0)
-
+    // const [total, setTotal] = useState("");
     
-    
-//     useEffect(() => {
-//         sum()
-//     }, [])
+    const navigate = useNavigate();
+   
+   
 
 
 //     const sum = () => {
@@ -32,6 +32,16 @@ const Cart = () => {
 //         setTotal(total1)
 //   }
 
+
+//   useEffect(() => {
+//     sum()
+// }, [total])
+
+
+const handleProceedCheck = () => {
+    navigate('/shipment');
+
+}
   
     
 
@@ -49,10 +59,11 @@ const Cart = () => {
 
                     <h2>Order Summary</h2>
                     <h3>Items Ordered { cart.length }</h3>
-                    <p>Total : {  }</p>
-                    <p>Total Shipping : $5 </p>
-                    <p>Sub Total : { }</p>
-                    <Button variant="outline-info" href='/login'>Pay Now</Button>
+                    <p>Total Price : {  }</p>
+
+                    <Button onClick={handleProceedCheck}
+                        
+                     variant="outline-info">Proceed Checkout</Button>
                 </div>
             </div>
         </div>

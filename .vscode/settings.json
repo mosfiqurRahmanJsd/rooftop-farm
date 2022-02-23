@@ -26,5 +26,8 @@
         "veniam",
         "voluptas",
         "webfonts"
+    ],
+    "cSpell.ignoreWords": [
+        "reactjs"
     ]
 }

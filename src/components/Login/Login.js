@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation, } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import initializeAuthentication from '../../Firebase/firebase.initialize';
 import './Login.css';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
@@ -12,10 +12,7 @@ const provider = new GoogleAuthProvider();
 
 
 const Login = () => {
-    const location = useLocation();
-    console.log('came from', location.state?.from);
-
-
+    
     const { value1 } = useContext(UserContext);
 
     const [loggedInUser, setLoggedInUser] = value1;
@@ -24,10 +21,13 @@ const Login = () => {
     const [password, setPassword] = useState();
 
     const [error, setError] = useState("");
+    const navigate = useNavigate();
+    const location = useLocation();
     
 
     const handleGoogleSignIn = () => {
         const auth = getAuth();
+        
         signInWithPopup(auth, provider)
             .then((result) => {
                 // This gives you a Google Access Token. You can use it to access the Google API.
@@ -38,7 +38,10 @@ const Login = () => {
                     email: email,
                     photo: photoURL
                 }
+                
                 setLoggedInUser(loggedInUser);
+
+
                 // ...
             }).catch((error) => {
                 // Handle Errors here.
@@ -74,8 +77,15 @@ const Login = () => {
                     name: displayName,
                     email: email
                 }
+
                 setLoggedInUser(loggedInUser);
                 setError('Login Successfully');
+                if(location.state?.from) {
+                    navigate(location.state.from);
+                }
+                
+                
+
             })
             .catch(error => {
                 setError(error.message, error);

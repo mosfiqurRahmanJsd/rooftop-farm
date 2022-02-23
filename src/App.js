@@ -16,6 +16,10 @@ import { getStoredCart } from "./utilities/fakedb";
 import AddBlog from "./components/AddBlog/AddBlog";
 import BlogContainer from "./components/BlogContainer/BlogContainer";
 import BlogDetails from "./components/BlogDetails/BlogDetails";
+import Shipment from "./components/Shipment/Shipment";
+import Dashboard from "./components/Dashboard/Dashboard";
+import PrivateOutlet from "./components/PrivateOutlet/PrivateOutlet";
+
 
 
 
@@ -82,11 +86,12 @@ function App() {
               <Route path="/rooftop/add" element={<AddRooftop />} />
               <Route path="/blog/add" element={<AddBlog />} />
               <Route path="/cart" element={<Cart />} />
-              {/* <BrowserRouter>
-                <Route path="/" component={Cart} />
-                <PrivateRoute path="/private" component={Pay} />
-              </BrowserRouter> */}
-            </Routes>
+              
+              <Route path="/*" element={<PrivateOutlet />}>
+                  <Route path="dashboard" element={<Dashboard />} />
+                  <Route path="shipment" element={<Shipment />} />
+              </Route>
+              </Routes>
         </main>
       </UserContext.Provider>
   );

@@ -1,7 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import { clearTheCart } from "../../utilities/fakedb";
+import { UserContext } from "../../App";
+
 
 const SimpleCardFrom = ({ handlePayment }) => {
+    
+    const { value2 } = useContext(UserContext);
+
+    const [cart, setCart] = value2;
+   
+
     const stripe = useStripe();
     const elements = useElements();
 
@@ -36,6 +45,8 @@ const SimpleCardFrom = ({ handlePayment }) => {
             setPaymentSuccess(paymentMethod.id)
             setPaymentError(null)
             handlePayment(paymentMethod.id)
+            clearTheCart([]);
+            setCart([]);
         }
     };
 
@@ -44,6 +55,7 @@ const SimpleCardFrom = ({ handlePayment }) => {
             <form onSubmit={handleSubmit}>
                 <CardElement />
                 <button className='btn btn-primary mt-3 ms-auto' type="submit" disabled={!stripe}>
+                
                     Pay
                 </button>
             </form>
@@ -51,7 +63,8 @@ const SimpleCardFrom = ({ handlePayment }) => {
                 paymentError && <p style={{ color: "red" }}>{paymentError}</p>
             }
             {
-                paymentSuccess && <p style={{ color: "green" }}>Your payment was successfully.</p>
+                paymentSuccess && <p style={{ color: "green" }}>Your payment was successfully.</p> 
+                
             }
         </div>
     );

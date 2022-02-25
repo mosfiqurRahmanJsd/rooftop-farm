@@ -7,8 +7,7 @@ import { useContext } from 'react';
 import { UserContext } from '../../App';
 import { NavLink } from 'react-router-dom';
 import { Avatar } from '@mui/material';
-import { getStoredCart } from '../../utilities/fakedb';
-import { useEffect } from 'react';
+
 
 
 

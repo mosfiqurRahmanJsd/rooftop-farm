@@ -1,11 +1,12 @@
 import React from 'react';
-import AddRooftop from '../AddRooftop/AddRooftop';
+import AddProduct from '../AddProduct/AddProduct';
+
 
 const EntrepreneurDashboard = () => {
     return (
         <div className="margin container">
-            <h1>This is EntrepreneurDashboard</h1>
-            <AddRooftop></AddRooftop>
+            <h1 className="text-center">This is EntrepreneurDashboard</h1>
+            <AddProduct></AddProduct>
         </div>
     );
 }

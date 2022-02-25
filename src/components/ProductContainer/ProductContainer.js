@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { UserContext } from '../../App';
 import useProducts from '../../hooks/useProducts';
 import { addToDb } from '../../utilities/fakedb';
@@ -17,7 +17,7 @@ const ProductContainer = () => {
     const [cart, setCart] = value2;
     
     
-    const [products, setProducts] = useProducts();
+    const [products] = useProducts();
 
 
 

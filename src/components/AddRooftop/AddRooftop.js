@@ -50,7 +50,7 @@ export default function AddRooftop() {
 
     return (
         <div className="row py-5">
-            <h1>Add a New Rooftop Farm</h1>
+            <h1 className="text-center">Add a New Rooftop Farm</h1>
 
 
             <form onSubmit={handleAddRooftop} className="form-inline form-group">
@@ -98,7 +98,7 @@ export default function AddRooftop() {
                 
                 
                 
-                <input   type="submit" value="Add" />
+                <input class="form-control"    type="submit" value="Add" />
 
             </form>
         </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import AddBlog from '../AddBlog/AddBlog';
-import AddProduct from '../AddProduct/AddProduct';
+import AddRooftop from '../AddRooftop/AddRooftop';
 import './Dashboard.css';
 
 const Dashboard = () => {
@@ -47,7 +47,7 @@ const Dashboard = () => {
                 </div>
             </div>
 
-            <AddProduct></AddProduct>
+            <AddRooftop></AddRooftop>
             <AddBlog></AddBlog>
         </div>
     );

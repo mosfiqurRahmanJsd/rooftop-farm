@@ -39,6 +39,7 @@ export default function AddProduct() {
         <div className="add-product container">
             <h1 className="text-center">Added A New Product :</h1>
             <form onSubmit={handleAddProduct} className="form-inline form-group">
+            <h2>Product Details :</h2>
                 
                     <label htmlFor="productName">Product Name :</label>
                     <input className="form-control" type="text" id="productName" ref={nameRef} />

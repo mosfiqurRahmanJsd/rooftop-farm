@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 import {  removeFromDb } from '../../utilities/fakedb';
 import useCart from '../../hooks/useCart';
 import useProducts from '../../hooks/useProducts';
+import CartReview from '../CartReview/CartReview';
 
 
 
@@ -35,29 +36,13 @@ const Cart = () => {
     
     console.log('total', total);
 
-    useEffect(() => {
-        sum();
-    }, []);
-    
 
 
-    
-
-    const sum = () => {
-        if (cart?.length) {
-            let total = 0;
-            cart.forEach(value => {
-                console.log(value.price);
-                // console.log(value.quantity);
-                total += value.price;
-            })
-            
-        }
-            setTotal(parseFloat(total))
-            setTotal(total);
-     
-    }
    
+    
+
+
+    
 
 
 
@@ -83,17 +68,14 @@ const Cart = () => {
     return (
         <div className="cart container">
             <div className="row">
-                <div className="col-md-8">
+                <div className="col-md-8 product">
                     {
                         cart.map((singleCart, index) => <CartItem singleCart={singleCart} handleRemoveToCart={handleRemoveToCart} key={index}></CartItem>)
 
                     }
                 </div>
-                <div className="col-md-4">
-                    <h3>Total Price : { total} </h3>
-                    <Button onClick={handleProceedCheck}
-
-                        variant="outline-info">Proceed Checkout</Button>
+                <div className="col-md-4 ps-5">
+                   <CartReview cart={cart} handleProceedCheck={handleProceedCheck}></CartReview>
                 </div>
             </div>
         </div>

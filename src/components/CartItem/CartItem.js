@@ -4,7 +4,8 @@ import { CloseButton } from 'react-bootstrap';
 
 const CartItem = (props) => {
 
-    const { name, img, price, quantity, _id } = props.singleCart;
+    const { name, img, price, _id } = props.singleCart;
+    
 
     const { handleRemoveToCart } = props;
     return (
@@ -16,7 +17,6 @@ const CartItem = (props) => {
                 </div>
                 <div className="">
                     <h3>{name}</h3>
-                    <p>Quantity {quantity}</p>
                     <p>Price: {price}</p>
                     <CloseButton
 
@@ -28,6 +28,7 @@ const CartItem = (props) => {
                     
                 </div>
             </div>
+            <hr />
         </div>
     );
 }

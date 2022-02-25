@@ -48,36 +48,33 @@ const AddBlog = () => {
 
 
     return (
-        <div className="add-rooftop container">
-            <h1>Add a New Rooftop Farm</h1>
+        <div className="add-rooftop container py-5">
+            <h1 className="text-center">Add a New Blog</h1>
 
 
-            <form onSubmit={handleAddRooftop} className="form-inline">
-                <h1>Rooftop Details :</h1>
-
-
-
+            <form onSubmit={handleAddRooftop} className="form-inline form-group">
+                <h2>Blog Details :</h2>
 
                 <label htmlFor="squareFeet">Title:</label>
-                <input type="text" id="squareFeet" ref={titleRef} /> <br />
+                <input className="form-control" type="text" id="squareFeet" ref={titleRef} /> 
 
                 <label htmlFor="location">Detail :</label>
-                <input type="text" id="location" ref={detailRef} /> <br />
+                <input className="form-control"  type="text" id="location" ref={detailRef} /> 
 
 
                 <label htmlFor="short">Short Detail :</label>
-                <input type="text" id="short" ref={shotDetailRef} /> <br />
+                <input  className="form-control" type="text" id="short" ref={shotDetailRef} /> 
 
                 <label htmlFor="img">Blog Image URL :</label>
-                <input type="url" ref={imgRef} id="img" /> <br />
+                <input  className="form-control" type="url" ref={imgRef} id="img" /> 
 
                 <label htmlFor="moreImg">More Blog Image URL :</label>
-                <input type="url" ref={moreImgRef} id="moreImg" /> <br />
+                <input className="form-control"  type="url" ref={moreImgRef} id="moreImg" /> s
 
 
                 
                 <label htmlFor="moreDetail">More Detail :</label>
-                <input type="text" id="moreDetail" ref={moreDetailRef} /> <br />
+                <input className="form-control"  type="text" id="moreDetail" ref={moreDetailRef} />  <br />
 
 
 
@@ -88,7 +85,7 @@ const AddBlog = () => {
 
 
 
-                <input type="submit" value="Add" />
+                <input className="form-control"  type="submit" value="Add" />
 
             </form>
         </div>

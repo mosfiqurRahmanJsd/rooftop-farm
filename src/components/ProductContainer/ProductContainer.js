@@ -19,6 +19,8 @@ const ProductContainer = () => {
     
     const [products] = useProducts();
 
+    
+
 
 
     const handleAddToCart = (product) => {

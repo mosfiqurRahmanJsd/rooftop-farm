@@ -10,8 +10,12 @@ const HomeProductContainer = () => {
     
     const [products, setProducts] = useProducts();
 
-    const onlySixProducts = products.slice(1, 7);
-    // console.log(onlySixProducts);
+    
+
+    const onlySixProducts = products.slice(4, 100);
+    Array.prototype.reverse.call(onlySixProducts);
+
+    
 
 
 

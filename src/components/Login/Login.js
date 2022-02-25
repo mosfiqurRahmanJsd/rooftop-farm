@@ -1,19 +1,23 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import initializeAuthentication from '../../Firebase/firebase.initialize';
 import './Login.css';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
-import { useContext } from 'react';
 import { UserContext } from '../../App';
+
 
 initializeAuthentication();
 
 const provider = new GoogleAuthProvider();
 
 
+
 const Login = () => {
-    
-    
+
+    const { value2 } = useContext(UserContext);
+    const [cart] = value2;
+
+
     const { value1 } = useContext(UserContext);
 
     const [loggedInUser, setLoggedInUser] = value1;
@@ -24,11 +28,12 @@ const Login = () => {
     const [error, setError] = useState("");
     const navigate = useNavigate();
     const location = useLocation();
-    
+
+
 
     const handleGoogleSignIn = () => {
         const auth = getAuth();
-        
+
         signInWithPopup(auth, provider)
             .then((result) => {
                 // This gives you a Google Access Token. You can use it to access the Google API.
@@ -39,13 +44,13 @@ const Login = () => {
                     email: email,
                     photo: photoURL
                 }
-                
+
                 setLoggedInUser(loggedInUser);
-                if(location.state?.from) {
+                if (location.state?.from) {
                     navigate(location.state.from);
                 }
-                
-                
+
+
 
 
                 // ...
@@ -85,13 +90,34 @@ const Login = () => {
                     email: email
                 }
 
-                setLoggedInUser(loggedInUser);
+
                 setError('Login Successfully');
-                if(location.state?.from) {
-                    navigate(location.state.from);
+
+
+                const checkUser = loggedInUser;
+                if (checkUser.email === 'admin@gmail.com') {
+
+                    setLoggedInUser(checkUser);
+                    navigate('/dashboard');
+                } else if (checkUser.email === 'entrepreneur@gmail.com') {
+
+                    setLoggedInUser(checkUser);
+                    navigate('/entrepreneur');
+                } else if (cart.length) {
+                    setLoggedInUser(checkUser);
+                    navigate('/shipment');
                 }
-                
-                
+
+                else {
+                    setLoggedInUser(checkUser);
+                    navigate('/');
+                }
+
+
+
+
+
+
 
             })
             .catch(error => {
@@ -144,9 +170,6 @@ const Login = () => {
                                 <div className="row">
                                     <p className="text-success">{error}</p>
                                 </div>
-                                <Link className="link-color" to="/forgot_password">
-                                    Forgot Password
-                                </Link>
                             </div>
                             <input
                                 className="w-100 login-btn my-3"

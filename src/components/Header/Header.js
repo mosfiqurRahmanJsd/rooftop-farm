@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import { useContext } from 'react';
 import { UserContext } from '../../App';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { Avatar } from '@mui/material';
 
 
@@ -25,6 +25,8 @@ const Header = () => {
     
     const { value2 } = useContext(UserContext);
     const [cart] = value2;
+
+    const navigate = useNavigate();
     
 
 
@@ -72,7 +74,7 @@ const Header = () => {
                                         :
                                         (
                                             <Dropdown.Menu>
-                                                <NavLink className="dropdown-item text-dark" to="/login">User or Customer</NavLink>
+                                                <NavLink className="dropdown-item text-dark" to="/login" onClick={() => navigate('/')} >User or Customer</NavLink>
                                                 <NavLink className="dropdown-item text-dark" to="/entrepreneur">Entrepreneur Dashboard</NavLink>
                                                 <NavLink className="dropdown-item text-dark" to="/dashboard">Admin Dashboard</NavLink>
                                             </Dropdown.Menu>

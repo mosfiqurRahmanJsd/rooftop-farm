@@ -14,6 +14,7 @@ const RooftopContainer = () => {
        .then(data => setRooftop(data))
     }, []);
  
+    Array.prototype.reverse.call(rooftop);
 
     return (
         <div className="container my-5">

@@ -13,17 +13,17 @@ const Dashboard = () => {
         fetch('https://obscure-journey-61930.herokuapp.com/product')
         .then(res => res.json())
         .then(data => setProducts(data))
-     }, []);
+     }, [products]);
     useEffect(() => {
         fetch('https://obscure-journey-61930.herokuapp.com/rooftop')
         .then(res => res.json())
         .then(data => setRooftops(data))
-     }, []);
+     }, [rooftop]);
     useEffect(() => {
         fetch('https://obscure-journey-61930.herokuapp.com/blog')
         .then(res => res.json())
         .then(data => setBlogs(data))
-     }, []);
+     }, [blog]);
  
 
     return (

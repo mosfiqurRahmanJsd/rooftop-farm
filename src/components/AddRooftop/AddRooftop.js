@@ -57,48 +57,48 @@ export default function AddRooftop() {
                     <h1>Rooftop Details :</h1>
                 
                     <label htmlFor="name">Name :</label>
-                    <input class="form-control"  type="text" id="name" ref={nameRef} /> <br />
+                    <input className="form-control"  type="text" id="name" ref={nameRef} /> <br />
 
 
 
                     <label htmlFor="squareFeet">How many square feet? :</label>
-                    <input class="form-control"  type="number" id="squareFeet" ref={squareRef} /> <br />
+                    <input className="form-control"  type="number" id="squareFeet" ref={squareRef} /> <br />
 
                     <label htmlFor="location">Location :</label>
-                    <input class="form-control"  type="text" id="location" ref={locationRef} /> <br />
+                    <input className="form-control"  type="text" id="location" ref={locationRef} /> <br />
 
                     <label htmlFor="img">Rooftop Image URL :</label>
-                    <input class="form-control"  type="url" ref={imgRef} id="img" /> <br />
+                    <input className="form-control"  type="url" ref={imgRef} id="img" /> <br />
 
 
                     <label htmlFor="googleMap">Google map location URL :</label>
-                    <input class="form-control"  type="url" ref={mapRef} id="googleMap" /> <br />
+                    <input className="form-control"  type="url" ref={mapRef} id="googleMap" /> <br />
 
 
                   
                     <label htmlFor="someDetails">Some Details :</label>
-                    <input class="form-control"  type="text" ref={detailRef} id="someDetails" /> <br />
+                    <input className="form-control"  type="text" ref={detailRef} id="someDetails" /> <br />
 
                     <label htmlFor="moreDetails">More Details :</label>
-                    <input class="form-control"  type="text" ref={moreDetailRef} id="moreDetails" /> <br />
+                    <input className="form-control"  type="text" ref={moreDetailRef} id="moreDetails" /> <br />
 
                     <label htmlFor="phoneNumber">Phone Number :</label>
-                    <input class="form-control"  type="number" ref={phoneRef} id="phoneNumber" /> <br />
+                    <input className="form-control"  type="number" ref={phoneRef} id="phoneNumber" /> <br />
 
                     
 
                     <label htmlFor="emailAddress">E-mail :</label>
-                    <input class="form-control"  type="email" ref={emailRef} id="emailAddress" /> <br />
+                    <input className="form-control"  type="email" ref={emailRef} id="emailAddress" /> <br />
 
 
                     
                 
                     <label htmlFor="priceRoof">Price BDT :</label>
-                    <input class="form-control" type="number" ref={priceRef} id="priceRoof" /> <br />
+                    <input className="form-control" type="number" ref={priceRef} id="priceRoof" /> <br />
                 
                 
                 
-                <input class="form-control"    type="submit" value="Add" />
+                <input className="form-control"    type="submit" value="Add" />
 
             </form>
         </div>

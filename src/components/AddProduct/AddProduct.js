@@ -1,5 +1,4 @@
 import React, { useRef } from 'react'
-import './AddProduct.css'
 export default function AddProduct() {
 
     const nameRef = useRef()
@@ -38,26 +37,26 @@ export default function AddProduct() {
 
     return (
         <div className="add-product container">
-            <h1>Added A New Product</h1>
-            <form onSubmit={handleAddProduct} className="form-inline">
+            <h1 className="text-center">Added A New Product :</h1>
+            <form onSubmit={handleAddProduct} className="form-inline form-group">
                 
                     <label htmlFor="productName">Product Name :</label>
-                    <input type="text" id="productName" ref={nameRef} />
+                    <input className="form-control" type="text" id="productName" ref={nameRef} />
                 
                     <label htmlFor="productImg">Product Image URL :</label>
-                    <input type="url" ref={imgRef} id="productImg" />
+                    <input className="form-control"  type="url" ref={imgRef} id="productImg" />
                
                
                     <label htmlFor="productRatings">Product Ratings :</label>
-                    <input type="number" ref={starRef} id="productRatings" />
+                    <input className="form-control" type="number" ref={starRef} id="productRatings" />
                 
                     <label htmlFor="productPrice">Product Price :</label>
-                    <input type="number" ref={priceRef} id="productPrice" />
+                    <input className="form-control" type="number" ref={priceRef} id="productPrice" />
                
+                    <br />
+
                 
-                
-                
-                <input type="submit" value="Add" />
+                <input className="form-control" type="submit" value="Add" />
 
             </form>
 

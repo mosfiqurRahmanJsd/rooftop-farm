@@ -1,24 +1,33 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { UserContext } from '../../App';
 import useProducts from '../../hooks/useProducts';
 import { addToDb } from '../../utilities/fakedb';
 import Product from '../Product/Product';
 
 const HomeProductContainer = () => {
-    const [cart, setCart] = useState([]);
     
     
-    const [products] = useProducts();
+    
+    const [products, setProducts] = useProducts();
 
     const onlySixProducts = products.slice(1, 7);
     // console.log(onlySixProducts);
 
 
 
+    const { value2 } = useContext(UserContext);
+
+    const [cart, setCart] = value2;
+    
+    
+    
+
+
+
     const handleAddToCart = (product) => {
         const newCart = [...cart, product];
         setCart(newCart);
-        
-
+      
         // save to to local storage
         addToDb(product._id);
     }

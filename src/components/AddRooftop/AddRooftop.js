@@ -1,5 +1,4 @@
 import React, { useRef } from 'react'
-import './AddRooftop.css'
 export default function AddRooftop() {
 
     const squareRef = useRef()
@@ -50,56 +49,56 @@ export default function AddRooftop() {
 
 
     return (
-        <div className="add-rooftop container">
+        <div className="row py-5">
             <h1>Add a New Rooftop Farm</h1>
 
 
-            <form onSubmit={handleAddRooftop} className="form-inline">
+            <form onSubmit={handleAddRooftop} className="form-inline form-group">
                     <h1>Rooftop Details :</h1>
                 
                     <label htmlFor="name">Name :</label>
-                    <input type="text" id="name" ref={nameRef} /> <br />
+                    <input class="form-control"  type="text" id="name" ref={nameRef} /> <br />
 
 
 
                     <label htmlFor="squareFeet">How many square feet? :</label>
-                    <input type="number" id="squareFeet" ref={squareRef} /> <br />
+                    <input class="form-control"  type="number" id="squareFeet" ref={squareRef} /> <br />
 
                     <label htmlFor="location">Location :</label>
-                    <input type="text" id="location" ref={locationRef} /> <br />
+                    <input class="form-control"  type="text" id="location" ref={locationRef} /> <br />
 
                     <label htmlFor="img">Rooftop Image URL :</label>
-                    <input type="url" ref={imgRef} id="img" /> <br />
+                    <input class="form-control"  type="url" ref={imgRef} id="img" /> <br />
 
 
                     <label htmlFor="googleMap">Google map location URL :</label>
-                    <input type="url" ref={mapRef} id="googleMap" /> <br />
+                    <input class="form-control"  type="url" ref={mapRef} id="googleMap" /> <br />
 
 
                   
                     <label htmlFor="someDetails">Some Details :</label>
-                    <input type="text" ref={detailRef} id="someDetails" /> <br />
+                    <input class="form-control"  type="text" ref={detailRef} id="someDetails" /> <br />
 
                     <label htmlFor="moreDetails">More Details :</label>
-                    <input type="text" ref={moreDetailRef} id="moreDetails" /> <br />
+                    <input class="form-control"  type="text" ref={moreDetailRef} id="moreDetails" /> <br />
 
                     <label htmlFor="phoneNumber">Phone Number :</label>
-                    <input type="number" ref={phoneRef} id="phoneNumber" /> <br />
+                    <input class="form-control"  type="number" ref={phoneRef} id="phoneNumber" /> <br />
 
                     
 
                     <label htmlFor="emailAddress">E-mail :</label>
-                    <input type="email" ref={emailRef} id="emailAddress" /> <br />
+                    <input class="form-control"  type="email" ref={emailRef} id="emailAddress" /> <br />
 
 
                     
                 
                     <label htmlFor="priceRoof">Price BDT :</label>
-                    <input type="number" ref={priceRef} id="priceRoof" /> <br />
+                    <input class="form-control" type="number" ref={priceRef} id="priceRoof" /> <br />
                 
                 
                 
-                <input type="submit" value="Add" />
+                <input   type="submit" value="Add" />
 
             </form>
         </div>

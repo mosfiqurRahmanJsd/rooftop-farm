@@ -7,6 +7,8 @@ import { useContext } from 'react';
 import { UserContext } from '../../App';
 import { NavLink } from 'react-router-dom';
 import { Avatar } from '@mui/material';
+import { getStoredCart } from '../../utilities/fakedb';
+import { useEffect } from 'react';
 
 
 
@@ -20,14 +22,11 @@ const Header = () => {
     const [loggedInUser] = value1;
 
     const { email, name, photo } = loggedInUser;
-
-
-
-
+    
+    
     const { value2 } = useContext(UserContext);
     const [cart] = value2;
-
-
+    
 
 
     return (
@@ -65,8 +64,8 @@ const Header = () => {
                                 {
                                     email ? (<Dropdown.Menu>
                                         <NavDropdown.Item>{name}</NavDropdown.Item>
-                                        <NavLink className="dropdown-item text-dark" to="/dashboard">Dashboard</NavLink>
-                                        <NavLink className="dropdown-item text-dark" to="/entrepreneur">Entrepreneur</NavLink>
+                                        {email === 'admin@gmail.com' && <NavLink className="dropdown-item text-dark" to="/dashboard">Dashboard</NavLink>}
+                                        {email === 'entrepreneur@gmail.com' && <NavLink className="dropdown-item text-dark" to="/entrepreneur">Entrepreneur</NavLink>}
                                         <NavDropdown.Divider />
                                         <NavDropdown.Item href="/">Logout</NavDropdown.Item>
 

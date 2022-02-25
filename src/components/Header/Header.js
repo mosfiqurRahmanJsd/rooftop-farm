@@ -26,7 +26,7 @@ const Header = () => {
     const { value2 } = useContext(UserContext);
     const [cart] = value2;
 
-    const navigate = useNavigate();
+    
     
 
 
@@ -64,7 +64,7 @@ const Header = () => {
 
                                 {
                                     email ? (<Dropdown.Menu>
-                                        <NavDropdown.Item>{name}</NavDropdown.Item>
+                                        <NavDropdown.Item>{name? name: email}  </NavDropdown.Item>
                                         {email === 'admin@gmail.com' && <NavLink className="dropdown-item text-dark" to="/dashboard">Dashboard</NavLink>}
                                         {email === 'entrepreneur@gmail.com' && <NavLink className="dropdown-item text-dark" to="/entrepreneur">Entrepreneur</NavLink>}
                                         <NavDropdown.Divider />
@@ -74,7 +74,7 @@ const Header = () => {
                                         :
                                         (
                                             <Dropdown.Menu>
-                                                <NavLink className="dropdown-item text-dark" to="/login" onClick={() => navigate('/')} >User or Customer</NavLink>
+                                                <NavLink className="dropdown-item text-dark" to="/login"  >User or Customer</NavLink>
                                                 <NavLink className="dropdown-item text-dark" to="/entrepreneur">Entrepreneur Dashboard</NavLink>
                                                 <NavLink className="dropdown-item text-dark" to="/dashboard">Admin Dashboard</NavLink>
                                             </Dropdown.Menu>

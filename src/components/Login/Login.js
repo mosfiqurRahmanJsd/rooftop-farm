@@ -49,6 +49,11 @@ const Login = () => {
                 if (location.state?.from) {
                     navigate(location.state.from);
                 }
+                const checkUser = loggedInUser;
+                if(loggedInUser.name) {
+                    setLoggedInUser(checkUser);
+                    navigate('/');
+                }
 
 
 
@@ -168,7 +173,7 @@ const Login = () => {
                                     </label>
                                 </div>
                                 <div className="row">
-                                    <p className="text-success">{error}</p>
+                                    <p className="text-danger">{error}</p>
                                 </div>
                             </div>
                             <input

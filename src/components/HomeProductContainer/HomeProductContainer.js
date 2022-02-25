@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { UserContext } from '../../App';
 import useProducts from '../../hooks/useProducts';
 import { addToDb } from '../../utilities/fakedb';
@@ -12,7 +12,7 @@ const HomeProductContainer = () => {
 
     
 
-    const onlySixProducts = products.slice(4, 100);
+    const onlySixProducts = products.splice(-6);
     Array.prototype.reverse.call(onlySixProducts);
 
     

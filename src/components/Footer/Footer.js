@@ -40,6 +40,7 @@ const Footer = () => {
                     <div className="col-12 col-sm-6 col-md-2">
                         
                     <img className="img-fluid" src="https://i.ibb.co/JpN3VhM/asdf.png" alt="" />
+                    
                         
                         <ul className="list-unstyled mt-4 d-flex justify-content-around social-icon">
                             <li><a className="text-decoration-none" href="#0"><FontAwesomeIcon icon={faFacebook} /></a></li>
@@ -47,6 +48,8 @@ const Footer = () => {
                             <li><a className="text-decoration-none" href="#0"><FontAwesomeIcon icon={faInstagramSquare} /></a></li>
                            
                         </ul>
+
+                        <img className="img-fluid" src="https://cdn.statically.io/img/debuggersstudio.com/f=auto/wp-content/uploads/2020/09/bkash.gif" alt="" />
 
                     </div>
                 </div>

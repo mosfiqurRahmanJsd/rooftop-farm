@@ -2,10 +2,9 @@ import React, {  } from 'react';
 import Footer from '../Footer/Footer';
 
 import ReviewContainer from '../ReviewContainer/ReviewContainer';
-import RooftopContainer from './../RooftopContainer/RooftopContainer';
 import Slider from './../Slider/Slider';
-import ProductContainer from './../ProductContainer/ProductContainer';
 import HomeProductContainer from '../HomeProductContainer/HomeProductContainer';
+import HomeRooftopContainer from '../HomeRooftopContainer/HomeRooftopContainer';
 
 
 
@@ -20,7 +19,7 @@ const Home = () => {
 
         <>
             <Slider></Slider>
-            <RooftopContainer></RooftopContainer>
+            <HomeRooftopContainer></HomeRooftopContainer>
             <HomeProductContainer></HomeProductContainer>
             <ReviewContainer></ReviewContainer>
             <Footer></Footer>

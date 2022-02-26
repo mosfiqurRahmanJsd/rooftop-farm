@@ -42,7 +42,7 @@ const Shipment = () => {
 
 
 
-        fetch('http://localhost:5000/payment', {
+        fetch('https://obscure-journey-61930.herokuapp.com/payment', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

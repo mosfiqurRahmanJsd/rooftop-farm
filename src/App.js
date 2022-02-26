@@ -20,6 +20,7 @@ import Shipment from "./components/Shipment/Shipment";
 import Dashboard from "./components/Dashboard/Dashboard";
 import PrivateOutlet from "./components/PrivateOutlet/PrivateOutlet";
 import EntrepreneurDashboard from "./components/EntrepreneurDashboard/EntrepreneurDashboard";
+import UserDashboard from "./components/UserDashboard/UserDashboard";
 
 
 
@@ -71,6 +72,7 @@ function App() {
                   <Route path="dashboard" element={<Dashboard />} />
                   <Route path="shipment" element={<Shipment />} />
                   <Route path="entrepreneur" element={<EntrepreneurDashboard />} />
+                  <Route path="user" element={<UserDashboard />} />
               </Route>
               </Routes>
         </main>

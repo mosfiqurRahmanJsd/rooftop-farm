@@ -12,9 +12,9 @@ const HomeRooftopContainer = () => {
     }, []);
  
     
-    let len = rooftop.length;
-    const onlySixRooftop = rooftop.slice(len-7, len-1);
-    Array.prototype.reverse.call(onlySixRooftop);
+    // let len = rooftop.length;
+
+    Array.prototype.reverse.call(rooftop);
 
     return (
         <div className="container my-5">

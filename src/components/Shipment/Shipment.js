@@ -84,7 +84,7 @@ const Shipment = () => {
                         <br />
 
 
-                        <input className="form-control" type="submit" value="Add" />
+                        <input className="form-control" type="submit" value="Pay" />
 
                     </form>
                 </div>

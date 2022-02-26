@@ -46,9 +46,17 @@ const Dashboard = () => {
                     </div>
                 </div>
             </div>
+            <div className="row">
+                <div className="col-md-6">
+                    <AddRooftop></AddRooftop>
+                </div>
+                <div className="col-md-6">
+                    <AddBlog></AddBlog>
+                </div>
+            </div>
 
-            <AddRooftop></AddRooftop>
-            <AddBlog></AddBlog>
+            
+            
         </div>
     );
 }

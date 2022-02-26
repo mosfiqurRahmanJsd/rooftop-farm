@@ -59,7 +59,7 @@ const Shipment = () => {
         e.preventDefault();
         clearTheCart();
         setCart("");
-        navigate('/')
+        navigate('/user')
 
     }
 

@@ -65,7 +65,7 @@ const Header = () => {
                                 {
                                     email ? (<Dropdown.Menu>
                                         <NavDropdown.Item>{name? name: email}  </NavDropdown.Item>
-                                        {email !== ('admin@gmail.com' || 'entrepreneur@gmail.com') && <NavLink className="dropdown-item text-dark" to="/user">User Dashboard</NavLink>}
+                                        {email !== ('admin@gmail.com' || 'entrepreneur@gmail.com') && <NavLink className="dropdown-item text-dark" to="/user">History</NavLink>}
                                         {email === 'admin@gmail.com' && <NavLink className="dropdown-item text-dark" to="/dashboard">Dashboard</NavLink>}
                                         {email === 'entrepreneur@gmail.com' && <NavLink className="dropdown-item text-dark" to="/entrepreneur">Entrepreneur</NavLink>}
                                         <NavDropdown.Divider />

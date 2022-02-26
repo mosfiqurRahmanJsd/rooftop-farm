@@ -11,10 +11,10 @@ const HomeProductContainer = () => {
     const [products, setProducts] = useProducts();
 
     
-    // let len = products.length;
+    
     const onlySixProducts = products.slice(2, -1);
 
-    
+    Array.prototype.reverse.call(onlySixProducts);
 
 
 

@@ -39,7 +39,7 @@ const Shipment = () => {
 
         const paymentDetails = {email, trnxID, cart}
 
-
+        
 
 
         fetch('https://obscure-journey-61930.herokuapp.com/payment', {

@@ -6,26 +6,36 @@ import './UserDashboard.css';
 
 const UserDashboard = () => {
 
-    // const { value1 } = useContext(UserContext);
-    // const [loggedInUser] = value1;
-    // const [payment, setPayment] = useState([]);
-    // useEffect(() => {
-    //     fetch('https://obscure-journey-61930.herokuapp.com/payment')
-    //         .then(res => res.json())
-    //         .then(data => setPayment(data))
-    // }, []);
+    const { value1 } = useContext(UserContext);
+    const [loggedInUser] = value1;
+    const [orderSummery, setOrderSummery] = useState([]);
+    useEffect(() => {
+        const url = `https://obscure-journey-61930.herokuapp.com/payment?email=${loggedInUser.email}`;
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setOrderSummery(data))
+    }, [loggedInUser]);
 
-    
-    // console.log(payment[1]);
+
+
+
 
 
     return (
 
         <div className="top-margin container">
-            <h2>Order Summary Coming Soon...</h2>
-          
+            <h2 className="text-center">Order History</h2>
+            <h3 className="text-center">Email: {loggedInUser.email}</h3>
+            <h3 className="text-center">{loggedInUser.name}</h3>
+            <ol class="list-group list-group-numbered">
+                {
+                    orderSummery.map(singleOrder => <DashboardDetails singleOrder={singleOrder} loggedInUser={loggedInUser}></DashboardDetails>)
+                }
+                
+                
+            </ol>
 
-            
+
         </div>
 
 

@@ -8,19 +8,13 @@ const HomeRooftopContainer = () => {
     useEffect(() => {
        fetch('https://obscure-journey-61930.herokuapp.com/rooftop')
        .then(res => res.json())
-       .then(data => {
-        Array.prototype.reverse.call(data);
-        let sixRooftop = [];
-        for (let i = 0; i < 6; i++) {
-            const element = data[i];
-            sixRooftop.push(element)
-        }
-        setRooftop(sixRooftop);
-    });
+       .then(data => {setRooftop(data)})
     }, []);
  
     
-    
+    Array.prototype.reverse.call(rooftop);
+
+
 
     return (
         <div className="container my-5">

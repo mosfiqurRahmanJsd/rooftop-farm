@@ -32,9 +32,6 @@ const Cart = () => {
     const navigate = useNavigate();
 
 
-    const [total, setTotal] = useState(0);
-    
-    console.log('total', total);
 
 
 

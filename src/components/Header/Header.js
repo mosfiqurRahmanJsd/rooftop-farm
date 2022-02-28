@@ -3,10 +3,11 @@ import Container from './../../../node_modules/react-bootstrap/esm/Container';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { UserContext } from '../../App';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { Avatar } from '@mui/material';
+import { useEffect } from 'react';
 
 
 
@@ -25,6 +26,17 @@ const Header = () => {
     
     const { value2 } = useContext(UserContext);
     const [cart] = value2;
+
+
+    const [entrepreneur, setEntrepreneur] = useState([]);
+
+      
+      useEffect(() => {
+          const url = `https://obscure-journey-61930.herokuapp.com/entrepreneur?email=${loggedInUser.email}`
+          fetch(url)
+              .then(res => res.json())
+              .then(data => setEntrepreneur(data))
+      }, [loggedInUser])
 
     
     
@@ -68,6 +80,7 @@ const Header = () => {
                                         {email !== ('admin@gmail.com' || 'entrepreneur@gmail.com') && <NavLink className="dropdown-item text-dark" to="/user">History</NavLink>}
                                         {email === 'admin@gmail.com' && <NavLink className="dropdown-item text-dark" to="/dashboard">Dashboard</NavLink>}
                                         {email === 'entrepreneur@gmail.com' && <NavLink className="dropdown-item text-dark" to="/entrepreneur">Entrepreneur</NavLink>}
+                                        {entrepreneur[0] && <NavLink className="dropdown-item text-dark" to="/entrepreneur">Entrepreneur Dashboard</NavLink>}
                                         <NavDropdown.Divider />
                                         <NavDropdown.Item href="/">Logout</NavDropdown.Item>
 

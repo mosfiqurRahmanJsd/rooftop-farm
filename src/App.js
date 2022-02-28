@@ -9,10 +9,9 @@ import RooftopDetail from './components/RooftopDetail/RooftopDetail';
 import Header from "./components/Header/Header";
 import { Route, Routes } from "react-router-dom";
 import Contact from './components/Contact/Contact';
-import { createContext, useEffect, useState } from "react";
+import { createContext,  useState } from "react";
 import AddProduct from "./components/AddProduct/AddProduct";
 import AddRooftop from "./components/AddRooftop/AddRooftop";
-import { getStoredCart } from "./utilities/fakedb";
 import AddBlog from "./components/AddBlog/AddBlog";
 import BlogContainer from "./components/BlogContainer/BlogContainer";
 import BlogDetails from "./components/BlogDetails/BlogDetails";
@@ -21,6 +20,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import PrivateOutlet from "./components/PrivateOutlet/PrivateOutlet";
 import EntrepreneurDashboard from "./components/EntrepreneurDashboard/EntrepreneurDashboard";
 import UserDashboard from "./components/UserDashboard/UserDashboard";
+import EntrepreneurSingup from "./components/EntrepreneurSingup/EntrepreneurSingup";
 
 
 
@@ -41,7 +41,7 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState([]);
 
 
-
+ 
 
 
 
@@ -49,7 +49,7 @@ function App() {
 
   return (
 
-      <UserContext.Provider value={{ value1: [loggedInUser, setLoggedInUser], value2: [cart, setCart] }}>
+      <UserContext.Provider value={{ value1: [loggedInUser, setLoggedInUser], value2: [cart, setCart]  }}>
         <main>
           <Header></Header>
             <Routes>
@@ -63,6 +63,7 @@ function App() {
               <Route path="/cart" element={<Cart />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/entrepreneur/signup" element={<EntrepreneurSingup />} />
               <Route path="/product/add" element={<AddProduct />} />
               <Route path="/rooftop/add" element={<AddRooftop />} />
               <Route path="/blog/add" element={<AddBlog />} />

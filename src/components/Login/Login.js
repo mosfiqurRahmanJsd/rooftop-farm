@@ -29,6 +29,9 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    
+    
+
 
 
     const handleGoogleSignIn = () => {
@@ -186,7 +189,11 @@ const Login = () => {
                         <p className="text-center mt-2">
                             Don't Have Account ?{" "}
                             <Link className="link-color" to="/signup">
-                                Create an account
+                                Create an user account 
+                            </Link>
+                            <br />
+                            <Link className="link-color" to="/entrepreneur/signup">
+                                or Create an entrepreneur account 
                             </Link>
                         </p>
                     </div>

@@ -27,7 +27,7 @@ const UserDashboard = () => {
             <h2 className="text-center">Order History</h2>
             <h3 className="text-center">Email: {loggedInUser.email}</h3>
             <h3 className="text-center">{loggedInUser.name}</h3>
-            <ol class="list-group list-group-numbered">
+            <ol className="list-group list-group-numbered">
                 {
                     orderSummery.map(singleOrder => <DashboardDetails singleOrder={singleOrder} loggedInUser={loggedInUser}></DashboardDetails>)
                 }

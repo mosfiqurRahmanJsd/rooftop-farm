@@ -19,7 +19,7 @@ const HomeProductContainer = () => {
                 }
                 setProducts(sixProduct);
             });
-    }, []);
+    }, [setProducts]);
 
 
 

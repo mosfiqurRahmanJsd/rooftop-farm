@@ -16,6 +16,7 @@ export default function PrivateOutlet() {
     
 
     return loggedInUser.email != null ? <Outlet /> : <Navigate to="/login"  state={{ from: location }} />
+
         
        
     

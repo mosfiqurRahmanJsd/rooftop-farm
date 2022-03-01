@@ -8,7 +8,7 @@ const BlogDetails = () => {
 
     const [blog, setBlog] = useState([]);
 
-    const {detail, title, image, shotDetail, moreImg, moreDetail} = blog;
+    const {detail, title, img, shotDetail, moreImg, moreDetail} = blog;
 
     useEffect(() => {
         fetch(`https://obscure-journey-61930.herokuapp.com/blog/${id}`)
@@ -27,7 +27,7 @@ const BlogDetails = () => {
             
             <div className="row">
                 <div className="col-md-8 mb-5">
-                <img className="w-100" height="450px" src={image} alt="" />
+                <img className="w-100" height="450px" src={img} alt="" />
                 </div>
                 <div className="col-md-4">
                 <h4 className="text-info text-justify" style={{textAlign: 'justify'}}>{shotDetail}</h4>

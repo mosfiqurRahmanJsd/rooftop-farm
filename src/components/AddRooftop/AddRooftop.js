@@ -1,9 +1,9 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
+import axios from "axios";
 export default function AddRooftop() {
 
     const squareRef = useRef()
     const locationRef = useRef()
-    const imgRef = useRef()
     const mapRef = useRef()
     const detailRef = useRef()
     const moreDetailRef = useRef()
@@ -12,12 +12,12 @@ export default function AddRooftop() {
     const priceRef = useRef()
     const nameRef= useRef()
 
-   
+    const [image, setImage] = useState(null);
+
 
     const handleAddRooftop = (e) => {
         const squareFeet = squareRef.current.value;
         const location = locationRef.current.value;
-        const image = imgRef.current.value;
         const googleMap = mapRef.current.value; 
         const someDetail = detailRef.current.value;
         const moreDetail = moreDetailRef.current.value;
@@ -25,7 +25,12 @@ export default function AddRooftop() {
         const email = emailRef.current.value;
         const price = priceRef.current.value;
         const name = nameRef.current.value;
-       
+
+
+        if(!image) {
+            return;
+        }
+        
 
         const newRooftop = { name, squareFeet, location, image, googleMap, someDetail, moreDetail, phone, email, price };
 
@@ -45,6 +50,22 @@ export default function AddRooftop() {
         })
         e.preventDefault();
     }
+
+
+    const handleImageUpload = (event) => {
+        console.log(event.target.files[0]);
+        const imageData = new FormData();
+        imageData.set("key", "7cfe7387c84999a6c4f1dc752c2ce9cf");
+        imageData.append("image", event.target.files[0]);
+        axios
+          .post("https://api.imgbb.com/1/upload", imageData)
+          .then(function (response) {
+            setImage(response.data.data.display_url);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      };
 
 
 
@@ -67,8 +88,12 @@ export default function AddRooftop() {
                     <label htmlFor="location">Location :</label>
                     <input className="form-control"  type="text" id="location" ref={locationRef} /> <br />
 
-                    <label htmlFor="img">Rooftop Image URL :</label>
-                    <input className="form-control"  type="url" ref={imgRef} id="img" /> <br />
+                    <label htmlFor="img">Rooftop Image:</label>
+                    <input className="form-control"  type="file" 
+                        onChange={handleImageUpload}
+                    
+                     id="img" /> <br />
+                    
 
 
                     <label htmlFor="googleMap">Google map location URL :</label>

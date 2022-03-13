@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import axios from "axios";
+import './AddProduct.css';
 export default function AddProduct() {
 
     const nameRef = useRef()
@@ -52,8 +53,8 @@ export default function AddProduct() {
 
 
     return (
-        <div className="add-product container">
-            <h1 className="text-center">Added A New Fresh Vegetable :</h1>
+        <div className="add-product container dash-color py-5 mt-5 rounded text-color">
+            <h1 className="text-center ">Added A New Fresh Vegetable :</h1>
             <form onSubmit={handleAddProduct} className="form-inline form-group">
             <h2>Vegetable Details :</h2>
                 

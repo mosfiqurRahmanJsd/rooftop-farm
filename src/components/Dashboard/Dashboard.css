@@ -3,7 +3,10 @@
 }
 
 .box {
-    background-color: #FFF8EC;
+    background-color: #21c7b4;
+    background-image: linear-gradient(160deg, #21c7b4 0%, #6d0720 100%);
+    color: #FFF8EC;
     width: 300px;
     height: 120px
 }
+

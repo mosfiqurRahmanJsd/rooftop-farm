@@ -11,9 +11,9 @@ const Blog = (props) => {
     return (
         <>
         <Link to={`/blog/${_id}`} className="text-decoration-none text-dark">
-        <div className="row border rounded mb-3 bg-color shadow-sm">
+        <div className="row border rounded mb-3 bg-blog shadow-sm">
             <div className="col-md-4 p-0">
-                <img width="410" height="220" src={img} alt="" />
+                <img width="410" height="235" src={img} alt="" />
             </div>
             <div className="col-md-8 py-3">
                 <h3>{title}</h3>

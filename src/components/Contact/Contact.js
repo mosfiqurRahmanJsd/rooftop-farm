@@ -6,7 +6,7 @@ const Contact = () => {
     return (
         <div>
             <div className="container contact-us">
-                <h4 className="mb-4 text-center text-light bg-info py-3 rounded"> An Web-based Application for Promoting Rooftop Farming and Consumption of Fresh Fruits Among Urban People</h4>
+                <h4 className="mb-4 text-center text-light contact-text py-3 rounded"> An Web-based Application for Promoting Rooftop Farming and Consumption of Fresh Fruits Among Urban People</h4>
                 <div className="row">
                     
                     <div className="col-md-6 d-flex align-items-center justify-content-evenly">

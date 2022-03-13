@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import axios from "axios";
+import './AddRooftop.css';
 export default function AddRooftop() {
 
     const squareRef = useRef()
@@ -70,7 +71,7 @@ export default function AddRooftop() {
 
 
     return (
-        <div className="row py-5">
+        <div className="row py-5 rooftop-color rounded">
             <h1 className="text-center">Add a New Rooftop Farm</h1>
 
 

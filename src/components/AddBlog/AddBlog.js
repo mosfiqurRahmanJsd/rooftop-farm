@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useRef } from 'react';
 import axios from "axios";
+import './AddBlog.css';
 
 
 
@@ -80,7 +81,7 @@ const AddBlog = () => {
 
 
     return (
-        <div className="add-rooftop container py-5">
+        <div className="add-rooftop container py-5 blog-color rounded">
             <h1 className="text-center">Add a New Blog</h1>
 
 
@@ -97,12 +98,11 @@ const AddBlog = () => {
                 <label htmlFor="short">Short Detail :</label>
                 <input  className="form-control" type="text" id="short" ref={shotDetailRef} /> 
 
-                <label htmlFor="img">Blog Image URL :</label>
+                <label htmlFor="img">Blog Image </label>
                 <input  className="form-control" type="file" onChange={handleImageUpload} id="img" /> 
 
-                <label htmlFor="moreImg">More Blog Image URL :</label>
-                <input className="form-control"  type="file" onChange={handleMoreImageUpload} id="moreImg" /> s
-
+                <label htmlFor="moreImg">More Blog Image:</label>
+                <input className="form-control"  type="file" onChange={handleMoreImageUpload} id="moreImg" /> 
 
                 
                 <label htmlFor="moreDetail">More Detail :</label>
